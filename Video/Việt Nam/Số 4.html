@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Từ Giây Phút Đầu - Hari Won, Trấn Thành</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="Chung.css">
+		<script type="text/javascript" src="Chung.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			
+			<div class="header">
+				<!-- THIS IS LOGO -->
+				<div class="icon1">
+					<a href="#">
+						<i class="fa fa-music" id="logo"></i>
+						<span>MjuDic Online</span>
+					</a>
+				</div>
+
+				<!-- THIS IS SEARCH BOX -->
+				<div class="search">
+					<input type="text" placeholder="Nhập nội dung cần tìm">
+				</div>
+
+				<div class="menu1">
+					<a href="#"><i class="fa fa-bars" id="id2" onclick="document.getElementById('id03').style.display=
+					'block'"> Menu</i></a>
+					<div id="id03" class="modal3">
+					  	<span onclick="document.getElementById('id03').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content3 animate">
+							<div class="small-menu">
+								<div><a href="E:\The study\HTML + CSS + JS + BOOTRAP\Project 2/Project 2.html">Trang chủ</a></div>
+								<div><a href="#">Nhạc cá nhân</a></div>
+								<div><a href="#">Album</a></div>
+								<div><a href="#">Video</a></div>
+								<div><a href="#">Nghệ sĩ</a></div>
+								<div><a href="#">BXH</a></div>
+							    <div><a href="#">Chủ đề</a></div>
+							    <div><a href="#">Top 100</a></div>
+							    <div><a href="#">Radio</a></div>
+							    <div><a href="#">VIP</a></div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<!-- THIS IS LOGIN AND TO REGISTER-->
+				<div class="login-to-regsiter">
+
+					<!-- LOGIN -->
+					<a onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"> Đăng nhập</i></a>
+					<div id="id01" class="modal">
+					  	<span onclick="document.getElementById('id01').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content animate" onsubmit=" return KTDN();" name="dangnhap">
+							<div class="imgcontainer">
+								<img src="E:\The study\HTML + CSS + JS + BOOTRAP\Project 2\Introduction/12.jpg" width="100%" class="avatar">
+							</div>
+							<div class="login">
+								<label><b>Account</b></label>
+								<input type="text" name="username" placeholder="Enter your user name"  required>
+								
+								<label><b>Password</b></label>
+								<input type="password" name="psw" placeholder="Enter your password" required>
+								<span id="loi-psw" style="color: red;font-size: 20px;"></span><br>
+
+								<button type="submit" class="submit">Login</button>
+								<input type="checkbox"> Remember me
+							</div>
+
+							<div class="login">
+								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+								<span class="psw">Forgot <a href="#"> password ?</a></span>
+							</div>
+						</form>
+					</div>
+
+					<label>/</label>
+
+					<!-- TO REGISTER-->
+					<a onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-key"> Đăng ký</i></a>
+					<div id="id02" class="modal2">
+					  	<span onclick="document.getElementById('id02').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content2 animate" onsubmit="return KTDK();" name="dangky">
+							<div class="to-regsiter">
+								<label><b>Account</b></label>
+							    <input type="text" placeholder="Enter account" name="acc"  id="acc" required>
+							    <span id="loi-acc" style="color: red;font-size: 20px;"></span><br>
+
+							    <label><b>Password</b></label>
+							    <input type="password" placeholder="Enter Password" name="psw" required>
+
+							    <label><b>Repeat Password</b></label>
+							    <input type="password" placeholder="Repeat Password" name="psw2" required>
+							    <span id="loi-psw2" style="color: red;font-size: 20px;"></span><br>
+
+							    <input type="checkbox" checked="checked"> Remember me
+
+							    <div class="clearfix">
+							      <button type="button" onclick="document.getElementById('id02').style.display='none'"  class="cancelbtn">Cancel</button>
+							      <button type="submit" class="signupbtn">Sign Up</button>
+							    </div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="body">
+				<!-- THIS IS SLIDESHOW -->
+				<div class="movement-part">
+					<img src="E:/The study/HTML + CSS + JS + BOOTRAP/Project 2/Introduction/01.jpg" name="image" id="image" alt="" style="width: 100%;" height="600px">
+					<a class="back" onclick="back();">&#10094;</a>
+					<a class="next" onclick="next();">&#10095;</a>
+				</div>
+
+				<!-- THE OTHER PART -->
+				<div class="other-part">
+					<div class="first">
+						
+					</div>
+
+					<div class="second">
+						<div class="open">
+							<div class="img">
+								<img src="04.jpg" width="200px" height="200px">
+							</div>
+							<div class="content">
+								<h1>Từ Giây Phút Đầu</h1>
+								<h2>Hari Won, Trấn Thành</h2><br>
+								<p>Phát hành: 2017</p>
+								<p>Thể loại: Video Việt Nam, Video Nhạc trẻ</p>
+								<div class="share">
+									<i class="fa fa-facebook"></i>
+									<i class="fa fa-google-plus"></i>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="audio-video">
+							<video controls="controls">
+								<source src="Video/[MV] Từ Giây Phút Đầu - Hari Won, Trấn Thành _ Zing MP3.mp4" type="video/mp4">
+							</video>
+						</div>
+
+						<div class="buttons">
+						<button><i class="fa fa-plus"> Thông tin</i></button>
+						<button><i class="fa fa-flag"> Phản hồi</i></button>
+						<button><i class="fa fa-share-alt"> Chia sẻ</i></button>
+						<span class="i"><i class="fa fa-headphones"> 1,005,826</i></span>
+						</div>
+
+						<div class="lyrics">
+							<p><b>Lời bài hát</b><br><br>
+								
+								Từ giây đầu tiên thấy anh <br>
+								Trái đất kia dường như đứng lại <br>
+								Từ giây đầu tiên thấy em <br>
+								Anh biết tim mình trao về ai <br>
+								Từ giây đầu tiên thấy nhau <br>
+								Em đã mong đợi mãi kéo dài <br>
+								Từ giây đầu tiên thấy nhau <br>
+								Anh đã mơ mình vai kề vai <br>
+								Và khao khát ngày nào <br>
+								Cùng với nhau ngọt ngào <br>
+								Phút giây này đây nhịp tim hòa mê say <br>
+								ĐK: <br>
+								Dường như chưa bao giờ <br>
+								Được yêu như bây giờ <br>
+								Mình cùng bước đến bên nhau thật gần<br>
+								Nụ hôn say đắm ru hồn lâng lâng <br>
+								Dường như chưa bao giờ <br>
+								Mình yêu hơn bây giờ <br>
+								Cầm tay khẽ nói theo anh về nhà <br>
+								Cùng nhau chia sớt từng ngày sẽ qua <br>
+								Yêu như chưa từng phôi pha <br><br>
+
+								Nép vai vào tựa đầu với anh <br>
+								Mãi bên nhau dù bao cỏ xanh <br>
+								Mãi tin nhau và nói yêu nhau dài lâu <br>
+								Từ nay có anh rồi <br>
+								Đời em thêm tuyệt vời <br>
+								Buồn vui sướng khó chia nhau ngọt bùi <br>
+								Chỉ cần ta bên cạnh nhau đấy thôi <br>
+								Gọi tên nhau mỗi ngày <br>
+								Và yêu hơn đã say <br>
+								Vợ chồng ta sẽ bên nhau một nhà <br>
+								Mình chung đôi mãi chẳng hề cách xa <br>
+								Dẫu tháng năm dài trôi qua
+							</p>
+						</div>
+					</div>
+
+					<div class="third">
+						
+					</div>
+				</div>	
+			</div>
+
+			<div class="footer">
+				<div class="letter">
+					<ul>
+						<li><a href="#">Giới thiệu</a></li>
+						<li><a href="#">Copyright</a></li>
+						<li><a href="#">APIs</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Điều khoản</a></li>
+						<li><a href="#">Khuong MP3 VIP</a></li>
+						<li><a href="#">Liên hệ</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Quảng cáo</a></li>
+						<li><a href="#">Ứng dụng</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">FAQs</a></li>
+						<li><a href="#">Góp ý</a></li>
+					</ul>
+				</div>
+
+				<div class="icon">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-google-plus"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+
+			</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="admin.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script type="text/javascript" src="admin.js"></script>
+	</head>
+	<body>
+		<div class="banner">
+			<div class="user">
+				<img src="introduction/admin.png">
+				<p>Admin Công Khương</p>
+				<a href="Project 2.html">Về trang chủ</a>
+			</div>
+			<div class="title">
+				<h2>TRANG QUẢN TRỊ</h2><br>
+				<h3>Trang web nghe nhạc trực tuyến MjuDic Online</h3>
+			</div>
+		</div>
+
+		<div class="menu">
+			<a href="#">
+				<div class="box" id="o1">
+					<img src="introduction/songs.jpg" style="width: 48px;height: 48px;">
+					<p>Quản lý bài hát</p>
+				</div>
+			</a>
+			<a href="#">
+				<div class="box" id="o2">
+					<img src="introduction/video_icon.png" style="width: 48px;height: 48px;">
+					<p>Quản lý video</p>
+				</div>
+			</a>
+			<a href="#">
+				<div class="box" id="o3">
+					<img src="introduction/news.png" style="width: 48px;height: 48px;">
+					<p>Quản lý tin tức âm nhạc</p>
+				</div>
+			</a>
+			<a href="#">
+				<div class="box" id="o4">
+					<img src="introduction/user.png">
+					<p>Quản lý người dùng</p>
+				</div>
+			</a>
+			<a href="loginAdmin.html">
+				<div class="box">
+					<img src="introduction/images.png">
+					<p>Thoát</p>
+				</div>
+			</a>
+		</div>
+
+		<div class="content">
+			<!-- quản lý loại tin-->	
+			<div class="function" id="chucnang">
+				<h3>Thêm bài hát mới</h3>
+				<form method="post">
+					<table>
+						<tr>
+							<td>Tên bài hát</td>
+							<td><input type="text" ></td>
+						</tr>
+						<tr>
+							<td>Tên ca sĩ</td>
+							<td><input type="text"></td>
+						</tr>
+						<tr>
+							<td>Ảnh minh họa</td>
+							<td><input type="file" value="Browse"></td>
+						</tr>
+						<tr>
+							<td>Từ khóa tìm kiếm</td>
+							<td><textarea style="width: 65%; height: 200px;"></textarea></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="button" value="Thêm bài hát"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div class="items" id="thietbi">
+				<form>
+					<table>
+						<tr>
+							<td>STT</td>
+							<td>Tên bài hát</td>
+							<td>Tên ca sĩ</td>
+							<td>Ảnh minh họa</td>
+							<td>Từ khóa tìm kiếm</td>
+							<td colspan="2">Quản lý</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>Anh đã quen với cô đơn</td>
+							<td>Soobin Hoàng Sơn</td>
+							<td><img src="Nghe nhiều nhất/01.jpg" style="width: 50px;"></td>
+							<td>Anh đã quen với cô đơn, Soobin Hoàng Sơn</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Từ bỏ</td>
+							<td>Khắc Việt</td>
+							<td><img src="Nghe nhiều nhất/02.jpg" style="width: 50px;"></td>
+							<td>Từ bỏ, Khắc Việt</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Điều buồn nhất</td>
+							<td>Kai Đinh</td>
+							<td><img src="Nghe nhiều nhất/03.jpg" style="width: 50px;"></td>
+							<td>Điều buồn nhất, Kai Đinh</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Mưa phi trường</td>
+							<td>Phạm Chí Huy</td>
+							<td><img src="Nghe nhiều nhất/07.jpg" style="width: 50px;"></td>
+							<td> Mưa phi trường, Phạm Chí Huy</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+							<tr>
+								<td>5</td>
+								<td>Can you feel it?</td>
+								<td>Hightlight</td>
+								<td><img src="Nghe nhiều nhất/05.jpg" style="width: 50px;"></td>
+								<td>Can you feel it?, Hight light</td>
+								<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+								<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+							</tr>
+					</table>
+				</form>
+			</div>
+			<!-- kết thúc quản lý loại tin-->
+			<!-- quản lý bài viết-->
+			<div class="function-1" id="chucnang">
+				<h3>Thêm video mới</h3>
+				<form action="" method="post">
+					<table>
+						<tr>
+							<td>Tên video</td>
+							<td><input type="text" ></td>
+						</tr>
+						<tr>
+							<td>Tên ca sĩ</td>
+							<td><input type="text"></td>
+						</tr>
+						<tr>
+							<td>Ảnh minh họa</td>
+							<td><input type="file" value="Browse"></td>
+						</tr>
+						<tr>
+							<td>Từ khóa tìm kiếm</td>
+							<td><textarea style="width: 65%; height: 200px;"></textarea></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="button" value="Thêm video"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div class="items-1" id="thietbi">
+				<form>
+					<table>
+						<tr>
+							<td>STT</td>
+							<td>Tên video</td>
+							<td>Tên ca sĩ</td>
+							<td>Ảnh minh họa</td>
+							<td>Từ khóa tìm kiếm</td>
+							<td colspan="2">Quản lý</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>Ta còn thuộc về nhau</td>
+							<td>Hương Tràm</td>
+							<td><img src="Xem nhiều nhất/01.jpg" style="width: 50px;"></td>
+							<td>Ta còn thuộc về nhau, Hương Tràm</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Thiên Tử</td>
+							<td>Đan Trường</td>
+							<td><img src="Xem nhiều nhất/03.jpg" style="width: 50px;"></td>
+							<td>Thiên Tử, Đan Trường</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Never Ever</td>
+							<td>GOT7</td>
+							<td><img src="Xem nhiều nhất/07.jpg" style="width: 50px;"></td>
+							<td>Never ever, GOT7</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Lạc Trôi</td>
+							<td>Sơn Tùng MTP</td>
+							<td><img src="Xem nhiều nhất/05.jpg" style="width: 50px;"></td>
+							<td>Lạc Trôi, Sơn Tùng MTP</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>Love Live</td>
+							<td>Loona 1/3</td>
+							<td><img src="Xem nhiều nhất/06.jpg" style="width: 50px;"></td>
+							<td>Lạc Trôi, Sơn Tùng MTP</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>Tìm Một Nửa Cô Đơn</td>
+							<td>Hòa Minzy</td>
+							<td><img src="Xem nhiều nhất/02.jpg" style="width: 50px;"></td>
+							<td>Tìm một nửa cô đơn, Hòa Minzy</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>Anh Đã Quen Với Cô Đơn</td>
+							<td>Soobin Hoàng Sơn</td>
+							<td><img src="Xem nhiều nhất/04.jpg" style="width: 50px;"></td>
+							<td>Anh đã quen với cô đơn, Soobin Hoàng Sơn</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div class="function-2" id="chucnang">
+				<h3>Thêm tin tức mới</h3>
+				<form action="" method="post">
+					<table>
+						<tr>
+							<td>Tên bài viết</td>
+							<td><input type="text" ></td>
+						</tr>
+						<tr>
+							<td>Ảnh minh họa</td>
+							<td><input type="file" value="Browse"></td>
+						</tr>
+						<tr>
+							<td>Nội dung</td>
+							<td><textarea style="width: 65%; height: 200px;"></textarea></td>
+						</tr>
+						<tr>
+							<td>Loại tin</td>
+							<td>
+								<select style="width: 100px">
+									<option>Sự kiện</option>
+									<option>Liên hệ</option>
+									<option>Giới thiệu</option>
+									<option>Tin tức</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="button" value="Thêm tin tức"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div class="items-2" id="thietbi">
+				<form>
+					<table>
+						<tr>
+							<td>STT</td>
+							<td>Tên bài viết</td>
+							<td>Ảnh minh họa</td>
+							<td>Loại tin</td>
+							<td colspan="2">Quản lý</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>Phạm Hương khóc trong buổi ra mắt sản phẩm</td>
+							<td><img src="Tin tức/01.jpg" style="width: 50px;"></td>
+							<td>Tin tức</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Những cảnh quay 'nói thay nỗi lòng' bạn trẻ trong 'La La ngày mới'</td>
+							<td><img src="Tin tức/02.gif" style="width: 50px;"></td>
+							<td>Tin tức</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>The Voice Anh náo loạn vì huấn luyện viên văng tục</td>
+							<td><img src="Tin tức/03.jpg" style="width: 50px;"></td>
+							<td>Tin tức</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>Tóc Tiên mời Siu Black thị phạm cho học trò The Voice</td>
+							<td><img src="Tin tức/04.jpg" style="width: 50px;"></td>
+							<td>Tin tức</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>Ca sĩ Phương Tring Julie có sức hấp dẫn cả đàn ông và phụ nữ</td>
+							<td><img src="Tin tức/05.jpg" style="width: 50px;"></td>
+							<td>Tin tức</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<!-- kết thúc quản lý bài viết-->
+			<!-- quản lý người dùng -->
+			<div class="add-user" id="chucnang">
+				<form>
+					<h3>Thêm tài khoản mới</h3><br><br>
+					<table>
+						<tr>
+							<td>User Name</td>
+							<td><input type="text" ></td>
+						</tr>
+						<tr>
+							<td>Email</td>
+							<td><input type="text" ></td>
+						</tr>
+						<tr>
+							<td>Password</td>
+							<td><input type="text" ></td>
+						</tr>
+						<tr>
+							<td>Confirm Password</td>
+							<td><input type="text" ></td>
+						</tr>
+						<tr>
+							<td>Role</td>
+							<td>
+								<select style="width: 130px">
+									<option>Công tác viên</option>
+									<option>Quản trị viên</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="button" value="Thêm tài khoản"></td>
+						</tr>
+					</table>
+				</form>	
+			</div>	
+			<div class="show-user" id="thietbi">
+				<form>
+					<table>
+						<tr>
+							<td>STT</td>
+							<td>User</td>
+							<td>Email</td>
+							<td>Role</td>
+							<td colspan="2">Action</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>congkhuong</td>
+							<td>anhkhuongmurom@gmail.com</td>
+							<td>quản trị viên</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>chuquocAnh</td>
+							<td>quocAnh96@gmail.com</td>
+							<td>quản trị viên</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>5anhemSieunhan</td>
+							<td>sieuNhan2000@gmail.com</td>
+							<td>quản trị viên</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>duongTrungQuoc</td>
+							<td>anhtrungpro@gmail.com</td>
+							<td>quản trị viên</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>hoangAty</td>
+							<td>tyMeo20698@gmail.com</td>
+							<td>quản trị viên</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>TranVanLam</td>
+							<td>LamDepTrai@gmail.com</td>
+							<td>quản trị viên</td>
+							<td><i class="fa fa-pencil-square-o" style="font-size: 20px"></i></td>
+							<td><i class="fa fa-trash" style="font-size:20px"></i></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<!-- kết thúc quản lý người dùng -->
+		</div>
+	</body>
+</html>

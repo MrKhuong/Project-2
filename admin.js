@@ -1,0 +1,61 @@
+$(document).ready(function(){
+	$("#o1").click(function() {
+		$(".function").show(200);
+		$(".items").show(200);
+		$(".function-1").hide();
+		$(".items-1").hide();
+		$(".function-2").hide();
+		$(".items-2").hide();
+		$(".user-name").hide();
+		$(".show-user").hide();
+		$(".add-user").hide();
+	});
+});
+$(document).ready(function(){
+	$("#o2").click(function() {
+		$(".function").hide();
+		$(".items").hide();
+		$(".function-1").show(200);
+		$(".items-1").show(200);
+		$(".function-2").hide();
+		$(".items-2").hide();
+		$(".show-user").hide();
+		$(".add-user").hide();
+		$(".user-name").hide();
+	});
+});
+$(document).ready(function(){
+	$("#o3").click(function() {
+		$(".function-2").show(200);
+		$(".items-2").show(200);
+		$(".function").hide();
+		$(".items").hide();
+		$(".function-1").hide();
+		$(".items-1").hide();
+		$(".show-user").hide();
+		$(".add-user").hide();
+		$(".user-name").hide();
+	});
+});
+$(document).ready(function(){
+	$("#o4").click(function() {
+		$(".function").hide();
+		$(".items").hide();
+		$(".function-1").hide();
+		$(".items-1").hide();
+		$(".function-2").hide();
+		$(".items-2").hide();
+		$(".user-name").show(200);
+		$(".show-user").hide();
+		$(".add-name").hide();
+	});
+});
+$(document).ready(function(){
+	$("#o4").click(function(){
+		$(".user-name").hide();
+		$(".add-user").show();
+		$(".show-user").show();
+	})
+})
+/**********************************************************************************/
+

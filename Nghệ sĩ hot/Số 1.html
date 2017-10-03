@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BIG BANG | Nghệ sĩ</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="Chung.css">
+		<style>
+			.second .bg-img{
+			    width: 100%;
+			    height: 243px;
+			    background-image: url('1.1.jpg');
+			    position: relative;
+			}
+		</style>
+		<script type="text/javascript" src="Chung.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			
+			<div class="header">
+				<!-- THIS IS LOGO -->
+				<div class="icon1">
+					<a href="#">
+						<i class="fa fa-music" id="logo"></i>
+						<span>MjuDic Online</span>
+					</a>
+				</div>
+
+				<!-- THIS IS SEARCH BOX -->
+				<div class="search">
+					<input type="text" placeholder="Nhập nội dung cần tìm">
+				</div>
+
+				<div class="menu1">
+					<a href="#"><i class="fa fa-bars" id="id2" onclick="document.getElementById('id03').style.display=
+					'block'"> Menu</i></a>
+					<div id="id03" class="modal3">
+					  	<span onclick="document.getElementById('id03').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content3 animate">
+							<div class="small-menu">
+								<div><a href="E:\The study\HTML + CSS + JS + BOOTRAP\Project 2/Project 2.html">Trang chủ</a></div>
+								<div><a href="#">Nhạc cá nhân</a></div>
+								<div><a href="#">Album</a></div>
+								<div><a href="#">Video</a></div>
+								<div><a href="#">Nghệ sĩ</a></div>
+								<div><a href="#">BXH</a></div>
+							    <div><a href="#">Chủ đề</a></div>
+							    <div><a href="#">Top 100</a></div>
+							    <div><a href="#">Radio</a></div>
+							    <div><a href="#">VIP</a></div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<!-- THIS IS LOGIN AND TO REGISTER-->
+				<div class="login-to-regsiter">
+
+					<!-- LOGIN -->
+					<a onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"> Đăng nhập</i></a>
+					<div id="id01" class="modal">
+					  	<span onclick="document.getElementById('id01').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content animate" onsubmit=" return KTDN();" name="dangnhap">
+							<div class="imgcontainer">
+								<img src="E:\The study\HTML + CSS + JS + BOOTRAP\Project 2\Introduction/12.jpg" width="100%" class="avatar">
+							</div>
+							<div class="login">
+								<label><b>Account</b></label>
+								<input type="text" name="username" placeholder="Enter your user name"  required>
+								
+								<label><b>Password</b></label>
+								<input type="password" name="psw" placeholder="Enter your password" required>
+								<span id="loi-psw" style="color: red;font-size: 20px;"></span><br>
+
+								<button type="submit" class="submit">Login</button>
+								<input type="checkbox"> Remember me
+							</div>
+
+							<div class="login">
+								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+								<span class="psw">Forgot <a href="#"> password ?</a></span>
+							</div>
+						</form>
+					</div>
+
+					<label>/</label>
+
+					<!-- TO REGISTER-->
+					<a onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-key"> Đăng ký</i></a>
+					<div id="id02" class="modal2">
+					  	<span onclick="document.getElementById('id02').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content2 animate" onsubmit="return KTDK();" name="dangky">
+							<div class="to-regsiter">
+								<label><b>Account</b></label>
+							    <input type="text" placeholder="Enter account" name="acc"  id="acc" required>
+							    <span id="loi-acc" style="color: red;font-size: 20px;"></span><br>
+
+							    <label><b>Password</b></label>
+							    <input type="password" placeholder="Enter Password" name="psw" required>
+
+							    <label><b>Repeat Password</b></label>
+							    <input type="password" placeholder="Repeat Password" name="psw2" required>
+							    <span id="loi-psw2" style="color: red;font-size: 20px;"></span><br>
+
+							    <input type="checkbox" checked="checked"> Remember me
+
+							    <div class="clearfix">
+							      <button type="button" onclick="document.getElementById('id02').style.display='none'"  class="cancelbtn">Cancel</button>
+							      <button type="submit" class="signupbtn">Sign Up</button>
+							    </div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="body">
+				<!-- THIS IS SLIDESHOW -->
+				<div class="movement-part">
+					<img src="E:/The study/HTML + CSS + JS + BOOTRAP/Project 2/Introduction/01.jpg" name="image" id="image" alt="" style="width: 100%;" height="600px">
+					<a class="back" onclick="back();">&#10094;</a>
+					<a class="next" onclick="next();">&#10095;</a>
+				</div>
+
+				<!-- THE OTHER PART -->
+				<div class="other-part">
+					<div class="first">
+						
+					</div>
+
+					<div class="second">
+						<div class="bg-img">
+							<div class="img-artist"><img src="01.jpg" width="150px" height="150px"></div>
+							<div class="artist-infor">
+								<h1>BIG BANG</h1>
+								<p>Big Bang (Tiếng Triều Tiên: 빅뱅), thường được viết là BIGBANG, là một nhóm nhạc nam của Hàn Quốc với 5 thành viên thuộc YG Entertainment. <br>
+								Big Bang được biết đến lần đầu tiên qua những tập phim tài liệu ghi lại quá...Tiểu sử BIGBANG</p>
+							</div>
+						</div>
+						<div class="introduce-artist">
+							<div class="vertical1">
+								<h2>TIỂU SỬ BIG BANG</h2>
+								<div>
+									Tên thật: BIGBANGNgày sinh: 08/05/2006Thể loại: Hàn Quốc, Rap / Hip Hop, Pop/Pop Ballad, R&B Quốc Gia: South Korea Big Bang (Tiếng Triều Tiên: 빅뱅), thường được viết là BIGBANG, là một nhóm nhạc nam của Hàn Quốc với 5 thành viên thuộc YG Entertainment. Big Bang được biết đến lần đầu tiên qua những tập phim tài liệu ghi lại quá trình hình thành của họ được chiếu trên TV với tựa đề The Big Bang Documentary từ tháng 7 đến tháng 8 năm 2006. Những tập phim này cũng được phát lại trên GomTV và MTV Hàn Quốc. Thời điểm này nhóm có 6 thành viên, sau đó một thành viên đã phải rời khỏi nhóm (SO-1, Jang Hyun Seung) trong lúc các tập tài liệu đang phát sóng trước khi nhóm chính thức ra mắt, để cuối cùng trở thành đội hình 5 thành viên như hiện nay gồm: G-Dragon, T.O.P, Taeyang, Daesung và Seungri. <br><br>
+
+									Dưới sự dẫn dắt của YG Entertainment, Big Bang liên tiếp phát hành những chuỗi single và EP và đạt được những thành công khá khiêm tốn. Cả nhóm chỉ thật sự đột phá với EP Always ("Luôn luôn") được phát hành vào năm 2007, làm tiền đề cho single số một của họ là "Lies" (Korean: 거짓말; Âm đọc: Geojitmal, Nghĩa: dối trá ). Những EP tiếp theo của họ là Hot Issue và Stand Up khẳng định vị trí của họ trong số những nhóm nhạc hip-hop hàng đầu tại Hàn Quốc. Sau khi được trao giải "Nghệ sĩ của năm" của chương trình Mnet KM Music Festival và giải thưởng "Seoul Gayo Daesang", cả nhóm mở rộng hoạt động sang thị trường Nhật Bản bằng việc phát hành một số mini album và single được phát sóng trên các kênh truyền thông. Tuy nhiên, những sản phẩm này không có được bất kỳ sự quảng bá nào cho đến khi single thật sự đầu tiên tại Nhật Bản của họ là My Heaven ("Thiên đường của tôi") chính thức ra mắt vào năm kế tiếp. <br><br>
+
+									Cuối năm 2009, Big Bang trở thành tên tuổi nghệ sĩ được tìm kiếm nhiều nhất tại Hàn Quốc. Họ cũng trở thành nhóm nhạc nước ngoài đầu tiên tại Nhật Bản nhận được giải thưởng của Truyền hình cáp Nhật Bản với hạng mục "Nghệ sĩ mới". Trong thời gian gần đây, các thành viên của nhóm dành thời gian cho những công việc cá nhân: Taeyang và G-Dragon phát hành những sản phẩm solo trong khi T.O.P, Daesung và Seungri bắt đầu sự nghiệp diễn xuất. <br><br>
+
+									Vũ đạo của họ không quá cầu kì như SNSD, SUJU, 2PM,... mà đơn giản thận thuộc dễ học đối với mọi người. Tuy nhiên, mỗi ngày họ luôn luôn cố gắng trau dồi, thể hiện bản thân của mình qua từng điệu nhảy. Bằng chứng là trưởng nhóm G-dragon đã rất thành công trong single "Heartbreaker". Với vũ đạo đặc biệt, cách thể hiện 'không giống ai' nhưng đầy cá tính, Big Bang chắc chắc sẽ làm nên điều kì diệu trong những năm tới. <br><br>
+
+									G-Dragon ( nhóm trưởng ) <br><br>
+
+									Tên thật : Kwon Ji-yong <br><br>
+
+									Ngày sinh : 18/8/1988 <br><br>
+
+									Chiều cao : 170cm <br><br>
+
+									Cân nặng : 54kg <br><br>
+
+									Nhóm máu : A <br><br>
+
+									Gia đình : ba, mẹ và chị <br><br>
+
+									Trình độ học vấn : Seoul Korean Traditional Arts cấp II & III <br><br>
+
+									Khả năng : rapper chính, hát Dance, Beat Boxing, sáng tác nhạc, hát được <br><br>nhuần nhuyễn tiếng Anh và Hoa, vũ đạo cực đẹp. <br><br>
+
+									Sở thích : vẽ và nghe nhạc <br><br>
+
+									Debut : DaeHanMinGook Hip Hop Flex [2001] <br><br>
+
+									*T aeyang <br><br>
+
+									Tê thật : Dong Young-bae <br><br>
+
+									Ngày sinh : 18/5/1988 <br><br>
+
+									Chiều cao : 170cm <br><br>
+
+									Cân nặng : 56kg <br><br>
+
+									Tên cũ: YB Taekwon <br><br>
+
+									Vị trí trong Big Bang : Vocalist <br><br>
+
+									Gia đình : ba mẹ và anh trai <br><br>
+
+									Nhóm máu : AB <br><br>
+
+									Khả năng : Rapping, Dancing, Beat Boxing, Singing, & Languages (Japanese & Chinese), Piano <br><br>
+
+									Sở thích : chơi bóng rổ, làm vườn và nghe nhạc, coi TV <br><br>
+
+									Hâm mộ : Usher, Omarion, Justin Timberlake <br><br>
+
+
+									*Seung-ri <br><br>
+
+									Tê thật : Lee Seung-hyun <br><br>
+
+									Ngày sinh : 12/12/1990 <br><br>
+
+									Chiều cao : 174cm <br><br>
+
+									Cân nặng : 57kg <br><br>
+
+									Tên thật: Lee Seung Hyun <br><br>
+
+									Vị trí trong Big Bang : Vocalist <br><br>
+
+									Gia đình : ba, mẹ và em <br><br>
+
+									Khả năng : Singing, dancing, & biên đạo múa <br><br>
+
+									Sở thích : tiếng nước ngoài <br><br>
+
+									Hâm mộ : Justin Timberlake and omarion.<br><br> 
+
+
+									*Daesung <br><br>
+
+									Tê thật : Kang Dae-sung <br><br>
+
+									Ngày sinh : 26/4/1989 <br><br>
+
+									Chiều cao : 173cm <br><br>
+
+									Cân nặng : 62kg <br><br>
+
+									Tên thật : Kang Dae Sung <br><br>
+
+									Vị trí trong Big Bang : Vocalist<br><br> 
+
+									Trình độ học vấn : KyeongIn High School <br><br>
+
+									Khả năng : hát, rap, beat box, and cooling <br><br>
+
+									Sở thích : sưu tập Doraemon <br><br>
+
+									Hâm mộ : Usher, Omarion, Ne-Yo, and Wheesung.<br><br> 
+
+
+									* T.O.P <br><br>
+
+									Tê thật : Choi Seung-hyun <br><br>
+
+									Ngày sinh : 4/11/1987 <br><br>
+
+									Chiều cao : 180cm <br><br>
+
+									Cân nặng : 65kg <br><br>
+
+									Trường học : cao đẳng nghệ thuật Seoul <br><br>
+
+									Vị trí trong Big Bang : Rapper <br><br>
+
+									Trình độ học vấn : Seoul Art College [Majoring in Musical] <br><br>
+
+									Khả năng : Raper chính, Beat Box, sáng tác <br><br>
+
+									Sở thích : đọc rap và bơi lội <br><br>
+
+									Hâm mộ : Usher, Omarion, JAY-Z, and B2K
+								</div>
+							</div>
+
+							<div class="vertical2">
+								<h2>NGHỆ SĨ TƯƠNG TỰ</h2>
+								<div class="list-artist">
+									<div>
+										<div class="img-artist-small"><img src="nstt1.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>Hiền Thục</p>
+											<p>4,525 quan tâm</p>
+										</div>
+									</div>
+									<div>
+										<div class="img-artist-small"><img src="nstt2.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>Trịnh Thăng Bình</p>
+											<p>14,525 quan tâm</p>
+										</div>
+									</div>
+									<div>
+										<div class="img-artist-small"><img src="nstt3.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>Hồ Quỳnh Hương</p>
+											<p>20,256 quan tâm</p>
+										</div>
+									</div>
+									<div>
+										<div class="img-artist-small"><img src="nstt4.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>V.Music</p>
+											<p>10,203 quan tâm</p>
+										</div>
+									</div>
+									<div>
+										<div class="img-artist-small"><img src="nstt5.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>Maroon 5</p>
+											<p>21,203 quan tâm</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="third">
+						
+					</div>
+				</div>	
+			</div>
+
+			<div class="footer">
+				<div class="letter">
+					<ul>
+						<li><a href="#">Giới thiệu</a></li>
+						<li><a href="#">Copyright</a></li>
+						<li><a href="#">APIs</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Điều khoản</a></li>
+						<li><a href="#">Khuong MP3 VIP</a></li>
+						<li><a href="#">Liên hệ</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Quảng cáo</a></li>
+						<li><a href="#">Ứng dụng</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">FAQs</a></li>
+						<li><a href="#">Góp ý</a></li>
+					</ul>
+				</div>
+
+				<div class="icon">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-google-plus"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+
+			</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,516 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: white;
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------THE HEADER--------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------*/
+.header{
+	background-color: #333;
+	height: 60px;
+	padding-left:  10%;
+	padding-right: 10%;
+	position: fixed;
+	z-index: 12;
+	width: 100%;
+}
+.header div{
+	float: left;
+}
+div.icon1{
+	width: 250px;
+	margin: 14px;
+}
+a{
+	text-decoration: none;
+}
+#logo{
+	color: white;
+	font-size: 35px;
+}
+span{
+	color: white;
+	margin-left: 15px;
+	font-size: 30px;
+	font-weight: bold;	
+	color: white;
+}
+div.search{
+	width: 310px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.search input[type=text]{
+	width: 300px;
+	height: 36px;
+	border-radius: 6px;
+	padding: 10px;
+	outline: none;
+}
+.search input[type=text]:hover{
+	background-repeat: no-repeat;
+	background-size: 36px 36px;
+	background-position: top right;
+}
+.menu1{
+ 	padding-top: 20px;
+ 	padding-left: 100px;
+ 	height: 100%;
+ }
+ .menu1 a{
+ 	color: white;
+ 	font-size: 21px;
+ }
+ /*----------------------------------------------------------THE MENU----------------------------------------------------*/
+.modal3{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+    z-index: 100;
+    top: 0;
+    left: 0;
+    position: fixed;
+    overflow: auto;
+    padding-top: 60px;
+    display: none;
+}
+.modal-content3{
+    background-color: #fefefe; 
+    margin: auto;
+    border: 1px solid #888;
+    width: 40%;
+    margin-top: 90px;
+}
+.modal3 .close{
+    position: absolute;
+    top: 40px;
+    right: 340px;   
+    color: white;
+    font-size: 60px;
+    z-index: 1;
+    font-weight: bold;
+}
+.modal3 .close:hover,
+.modal3 .close:focus{
+    color: red;
+    cursor: pointer;
+}
+.modal3 form{
+    border: 3px solid black;
+    width: 270px;
+    height: 400px;
+}
+.small-menu div{
+    display: block;
+    width: 100%;
+    line-height: 35px;
+    font-size: 30px;
+    text-align: center;
+}
+.small-menu div a{
+    color: black;
+}
+.small-menu div a:hover{
+    color: #9900cc;
+}
+/*                                        INSTALL FOR THE PART OF LOGIN AND TO REGISTER                                   */
+.login-to-regsiter{
+	margin-top: 20px;
+	margin-left: 50px;
+}
+.login-to-regsiter a{
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	margin-top: 10px;
+}
+.login-to-regsiter a i:hover{
+	text-decoration: underline;
+}
+.login-to-regsiter label{
+	color: white;
+	font-size: 20px;
+}
+
+/*                                                               LOGIN                                                    */
+.header .login-to-regsiter a{
+	cursor: pointer;
+}
+.header .login-to-regsiter .modal{
+	position: fixed;
+	display: none;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 30px;
+    z-index: 11 !important;
+}
+.header .login-to-regsiter .modal-content{
+	background-color: #fefefe; 
+    margin: auto;
+    border: 1px solid #888;
+    width: 40%;
+}
+.header .login-to-regsiter .modal-content label{
+	color: black;
+	margin: 8px 10px;
+}
+.header .login-to-regsiter .modal .close{
+    position: absolute;
+    right: 420px;
+    top: 30px;
+    color: #000;
+    font-size: 40px;
+    z-index: 1;
+}
+.header .login-to-regsiter .modal .close:hover,
+.header .login-to-regsiter .modal .close:focus{
+    color: red;
+    cursor: pointer;
+}
+.header .login-to-regsiter .modal form{
+    border: 3px solid black;
+    width: 530px;
+    height: 750px;
+}
+.header .login-to-regsiter .modal input[type=text],input[type=password]{
+    width: 500px;
+    padding: 12px 20px;
+    margin: 8px 10px;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.header .login-to-regsiter .modal button.submit{
+    width: 500px;
+    background-color: #4acf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 30px 10px;
+    font-size: 20px;
+}
+.header .login-to-regsiter .modal button.cancelbtn{
+    padding: 10px 18px;
+    background-color: red;
+    border-radius: 5px;
+    margin: 15px 10px;
+    font-size: 15px;
+    border: none;
+}
+.header .login-to-regsiter .modal span.psw{
+    float: right;
+    padding-top: 16px; 
+    color: black;
+    font-size: 20px;
+}
+.header .login-to-regsiter .modal span.psw a{
+	color: green;
+	font-size: 15px;
+}
+.header .login-to-regsiter .modal .imgcontainer{
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+.header .login-to-regsiter .modal img.avatar{
+    width: 60%;
+    border-radius: 50%;
+}
+.header .login-to-regsiter .modal .login input[type=checkbox]{
+	margin: 15px 10px;
+}
+.header .login-to-regsiter .modal .login{
+	width: 500px;
+    padding: 0;
+}
+
+/* TO REGISTER */
+.header .login-to-regsiter .modal2{
+	position: fixed;
+	display: none;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 80px;
+    z-index: 11 !important;
+}
+.header .login-to-regsiter .modal-content2{
+	background-color: #fefefe; 
+    margin: auto;
+    border: 1px solid #888;
+    width: 40%;
+    margin-top: 90px;
+}
+.header .login-to-regsiter .modal-content2 label{
+	color: black;
+	margin: 8px 10px;
+}
+.header .login-to-regsiter .modal2 .close{
+    position: absolute;
+	top: 40px;
+	right: 340px;	
+    color: white;
+    font-size: 60px;
+    z-index: 1;
+    font-weight: bold;
+}
+.header .login-to-regsiter .modal2 .close:hover,
+.header .login-to-regsiter .modal2 .close:focus{
+    color: red;
+    cursor: pointer;
+}
+.header .login-to-regsiter .modal2 form{
+    border: 3px solid black;
+    width: 530px;
+    height: 400px;
+}
+.header .login-to-regsiter .modal2 input[type=text],input[type=password]{
+    width: 500px;
+    padding: 12px 20px;
+    margin: 8px 10px;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.header .login-to-regsiter .modal2 button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+
+}
+.header .login-to-regsiter .modal2 button.cancelbtn{
+	background-color: red;
+}
+.header .login-to-regsiter .modal2 button.cancelbtn,
+.header .login-to-regsiter .modal2 button.signupbtn{
+	float: left;	
+	width: 50%;
+}
+.header .login-to-regsiter .modal2 .clearfix{
+	width: 100%;
+	
+}
+.header .login-to-regsiter .modal2 .login2 input.check{
+	width: 20px;
+	height: 20px;
+	margin: 15px;
+}
+.header .login-to-regsiter .modal2 .login2{
+	width: 500px;
+ 	margin-top: 20px;
+}
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+/*----------------------------------------------------------THE BODY----------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------*/
+.body{
+	width: 100%;
+	height: 100%;
+}
+/*-----------------------------------------------------THE MOVEMENT PART------------------------------------------------*/
+.movement-part{
+    width: 100%;
+    height: 600px;  
+    top: 60px;
+}
+
+.body  .movement-part .back{
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    left: 0;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+
+}
+.body .movement-part .next{
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    right: 0;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px 0 0 3px ;
+}
+.body  .movement-part:hover .back,
+.body .movement-part:hover .next{
+    background-color: #333;
+}
+/*----------------------------------------------------------THE OTHER PART----------------------------------------------*/
+.other-part{
+    width: 100%;
+    height: 1140px;
+}
+.other-part div{
+    float: left;
+    height: 100%;
+}
+.other-part div.first,div.third{
+    width: 10%;
+}
+.other-part div.second{
+    width: 80%;
+    height: 100%; 
+    display: block; 
+}
+.second .open{
+   width: 100%;
+   height: 200px; 
+}
+.open div{
+    float: left;
+}
+.open .img{
+    height: 200px;
+}
+.open .content{
+    margin-left: 100px;
+    height: 200px;
+}
+p{
+    font-size: 20px;    
+}
+.open .share{
+    margin-top: 35px;
+}
+.open .share i{
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 100%;
+    margin-left: 15px;
+}
+.open .share i:first-child{
+    background-color: blue;
+}
+.open .share i:nth-child(2){
+    color: red;
+}
+
+.second .audio-video{
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    background-image: url('011.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+audio{
+    width: 100%;
+    margin-top: 268px;
+}
+.second .buttons{
+    margin-top: 20px;
+    width: 100%;
+    height: 100px;
+}
+.buttons button{
+    width: 100px;
+    height: 40px;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    background-color: gray;
+    outline: none;
+    font-size: 17px;
+    margin-top: 20px;
+}
+.buttons button:hover{
+	color: green;
+}
+span.i{
+	float: right;
+	color: black;
+	margin-top: 20px;
+}
+.second .lyrics{
+    width: 100%;
+    height: 500px;
+    border: 1px solid silver;
+    overflow-y: auto;
+    padding-left: 25px;
+}
+/*----------------------------------------------------------THE FOOTER--------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------*/
+.footer{
+    background-color: #333;
+    width: 100%;
+    height: 160px;
+    padding-left: 15%;
+    padding-right: 15%; 
+}
+.footer div{
+    display: inline-table;
+}
+.footer div.letter ul{
+    list-style-type: none;
+    width: 200px;
+    height: 150px;
+    display: inline-table;
+}
+.footer div.letter ul li{
+    height: 50px;
+    padding: 15px 15px 15px 30px;
+}
+.footer div.letter ul li a{
+    text-decoration: none;
+    color: silver;
+}
+.footer div.icon{
+    margin-left: 15px;
+}
+.footer div.icon a{
+    display: block;
+    background-color: silver;
+    text-align: center;
+    margin-top: 10px;
+    padding: 2px;
+    border-radius: 5px;
+}
+.footer div.icon a i{
+    font-size: 35px;
+}

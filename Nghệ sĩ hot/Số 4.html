@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Đan Trường | Nghệ sĩ</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="Chung.css">
+		<style>
+			.second .bg-img{
+			    width: 100%;
+			    height: 243px;
+			    background-image: url('4.4.jpg');
+			    position: relative;
+			}
+		</style>
+		<script type="text/javascript" src="Chung.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			
+			<div class="header">
+				<!-- THIS IS LOGO -->
+				<div class="icon1">
+					<a href="#">
+						<i class="fa fa-music" id="logo"></i>
+						<span>MjuDic Online</span>
+					</a>
+				</div>
+
+				<!-- THIS IS SEARCH BOX -->
+				<div class="search">
+					<input type="text" placeholder="Nhập nội dung cần tìm">
+				</div>
+
+				<div class="menu1">
+					<a href="#"><i class="fa fa-bars" id="id2" onclick="document.getElementById('id03').style.display=
+					'block'"> Menu</i></a>
+					<div id="id03" class="modal3">
+					  	<span onclick="document.getElementById('id03').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content3 animate">
+							<div class="small-menu">
+								<div><a href="E:\The study\HTML + CSS + JS + BOOTRAP\Project 2/Project 2.html">Trang chủ</a></div>
+								<div><a href="#">Nhạc cá nhân</a></div>
+								<div><a href="#">Album</a></div>
+								<div><a href="#">Video</a></div>
+								<div><a href="#">Nghệ sĩ</a></div>
+								<div><a href="#">BXH</a></div>
+							    <div><a href="#">Chủ đề</a></div>
+							    <div><a href="#">Top 100</a></div>
+							    <div><a href="#">Radio</a></div>
+							    <div><a href="#">VIP</a></div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<!-- THIS IS LOGIN AND TO REGISTER-->
+				<div class="login-to-regsiter">
+
+					<!-- LOGIN -->
+					<a onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"> Đăng nhập</i></a>
+					<div id="id01" class="modal">
+					  	<span onclick="document.getElementById('id01').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content animate" onsubmit=" return KTDN();" name="dangnhap">
+							<div class="imgcontainer">
+								<img src="E:\The study\HTML + CSS + JS + BOOTRAP\Project 2\Introduction/12.jpg" width="100%" class="avatar">
+							</div>
+							<div class="login">
+								<label><b>Account</b></label>
+								<input type="text" name="username" placeholder="Enter your user name"  required>
+								
+								<label><b>Password</b></label>
+								<input type="password" name="psw" placeholder="Enter your password" required>
+								<span id="loi-psw" style="color: red;font-size: 20px;"></span><br>
+
+								<button type="submit" class="submit">Login</button>
+								<input type="checkbox"> Remember me
+							</div>
+
+							<div class="login">
+								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+								<span class="psw">Forgot <a href="#"> password ?</a></span>
+							</div>
+						</form>
+					</div>
+
+					<label>/</label>
+
+					<!-- TO REGISTER-->
+					<a onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-key"> Đăng ký</i></a>
+					<div id="id02" class="modal2">
+					  	<span onclick="document.getElementById('id02').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content2 animate" onsubmit="return KTDK();" name="dangky">
+							<div class="to-regsiter">
+								<label><b>Account</b></label>
+							    <input type="text" placeholder="Enter account" name="acc"  id="acc" required>
+							    <span id="loi-acc" style="color: red;font-size: 20px;"></span><br>
+
+							    <label><b>Password</b></label>
+							    <input type="password" placeholder="Enter Password" name="psw" required>
+
+							    <label><b>Repeat Password</b></label>
+							    <input type="password" placeholder="Repeat Password" name="psw2" required>
+							    <span id="loi-psw2" style="color: red;font-size: 20px;"></span><br>
+
+							    <input type="checkbox" checked="checked"> Remember me
+
+							    <div class="clearfix">
+							      <button type="button" onclick="document.getElementById('id02').style.display='none'"  class="cancelbtn">Cancel</button>
+							      <button type="submit" class="signupbtn">Sign Up</button>
+							    </div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="body">
+				<!-- THIS IS SLIDESHOW -->
+				<div class="movement-part">
+					<img src="E:/The study/HTML + CSS + JS + BOOTRAP/Project 2/Introduction/01.jpg" name="image" id="image" alt="" style="width: 100%;" height="600px">
+					<a class="back" onclick="back();">&#10094;</a>
+					<a class="next" onclick="next();">&#10095;</a>
+				</div>
+
+				<!-- THE OTHER PART -->
+				<div class="other-part">
+					<div class="first">
+						
+					</div>
+
+					<div class="second">
+						<div class="bg-img">
+							<div class="img-artist"><img src="04.jpg" width="150px" height="150px"></div>
+							<div class="artist-infor">
+								<h1>ĐAN TRƯỜNG</h1>
+								<p>- Từ những năm cuối thập niên 90, cái tên Đan Trường được các khán giả yêu nhạc trẻ luôn nhắc đến! Một gương mặt đẹp trai, một vóc dáng lý tưởng trên sân khấu và một chất giọng ngọt ngào, êm dịu, Đan Trường làm người...Tiểu sử Đan Trường</p>
+							</div>
+						</div>
+						<div class="introduce-artist">
+							<div class="vertical1">
+								<h2>TIỂU SỬ ĐAN TRƯỜNG</h2>
+								<div>
+									Tên thật: Phạm Đan Trường <br><br>
+
+									Ngày sinh: 29/11/1976Thể loại: Việt Nam, Nhạc Trẻ, Nhạc Trữ Tình, Nhạc Dân Ca - Quê Hương Quốc Gia: Việt Nam Từ những năm cuối thập niên 90, cái tên Đan Trường được các khán giả yêu nhạc trẻ luôn nhắc đến! Một gương mặt đẹp trai, một vóc dáng lý tưởng trên sân khấu và một chất giọng ngọt ngào, êm dịu, Đan Trường làm người ta hy vọng về một “hiện tượng mới” của nhạc trẻ trong năm 1999. <br><br>
+
+
+
+									Tên của Đan Trường là Phạm Đan Trường, sinh 29-11-1976, là con trưởng trong gia đình của 4 anh em. Đan trường có 3 em gái và gia đình không có ai hoạt động trong nghành nghề nghệ thuật. <br><br>
+
+
+
+									Hồi nhỏ, Đan Trường rất mê nhạc, thích hát và hát khá haỵ Năm 1996, Nhà văn hoá quận 10 tổ chức cuộc thi giọng hát hay, Đan Trường dự thi với ca khúc Gửi người tôi yêu và đoạt giải ba. Nhưng phải đến năm 1997, Đan Trường mới thực sự theo nghề ca hát. <br><br>
+
+
+
+									Mỗi ca sĩ đều có phong cách thể hiện khác nhau, không ai giống ai Đan Trường đang nỗ lực hết sức để có một phong cách thể hiện bài hát mang dấu ấn riêng của mình. <br><br>
+
+
+
+									Đan Trường rất cẩn trọng trong việc chọn bài hát cho phù hợp với chất giọng của mình. May mắn Đan Trường được ngay chính các nhạc sĩ sáng tác bài hát hướng dẫn. Đan Trường đang cố gắng học thêm thanh nhạc ở cô Mỹ An (Nhạc viện thành phố), cũng như ngoại ngữ để củng cố thêm nghề nghiệp cho mình.<br><br> 
+
+
+
+									Với những nỗ lực đó, Đan Trường đã có được một lực lượng khán giả hùng hậu, có thể nói là hùng hậu nhất Việt Nam yêu mến, và cho tới bây giờ anh đã thực hiện được 5 liveshow hoành tráng phát sóng khắp cả nước, phát hành gần 20 CD riêng và nhiều CD tổng hợp khác. Đặc biệt cùng với Cẩm Ly đã tạo nên 1 bộ đôi hoàn hảo nhất trong làn Vpop Việt Nam cho tới bây giờ. <br><br>
+
+
+
+									Trong suốt quá trình tham gia vào ca hát, Đan Trường đạt được nhiều giải thưởng như: Ca sĩ được yêu thích nhất năm 1999 do Tạp chí Thanh niên trao tặng; Nhân vật được yêu thích năm 1999 do bạn đọc và báo Mực Tím trao tặng, Cúp vàng ngôi sao 2000 do Báo Văn hóa, Đặc san Văn hóa và Đài truyền hình Việt Nam trao tặng; Giải thưởng Mai Vàng do báo Người Lao Động bình chọn; Giải thưởng Làn Sóng Xanh (Đài Tiếng nói Nhân dân TP.HCM) nhiều năm liền; Giải thưởng VTV Bài hát tôi yêu (Đài Truyền hình Việt Nam); Giải thưởng ca sĩ được yêu thích nhất của HTV 3 năm liền; cùng nhiều giải thưởng lớn nhỏ khác... <br><br>
+
+
+
+									Ngoài ca hát, Đan Trường còn tham gia vào lĩnh vực điện ảnh với phim cổ tích "Vua hóa cò", "Hoàng tử chăn lợn", hay gần đây nhất là phim điện ảnh "Võ lâm truyền kỳ" chiếu dịp Tết 2006 đã gây được nhiều tiếng vang lớn. Cuối năm 2009 Đan Trường cũng xuất hiện trong bộ phim truyền hình "Nhất Quỷ Nhì Ma" với vai trò là diễn viên chính. Ngoài ra Đan Trường được Đại sứ quán Đài Loan và Hà Lan tại TP.HCM chọn làm "Đại sứ Du lịch" và đang tiến hành công việc tại Đài Loan, Hà Lan và Việt Nam. Song song đó, H.T Production cũng tiến hành nhiều kế hoạch mới để đánh bóng và tiếp tục đẩy mạnh Đan Trường trong làng nhạc Việt. <br><br>
+
+
+
+									Đầu tháng 12 vừa qua. Đan Trường đã tổ chức cho mình 1 liveshow tại sân khấu Trống Đồng với chủ đề Ngôi Sao Bay, trong liveshow này Đan Trường đã giới thiệu những ca khúc mới nhất của mình trong 2 Album Vol 20 và 21 vừa phát hành trước đó vài ngày. Liveshow đã được đầu tư rất lớn với kinh phí gần 1 tỷ đồng, lớn nhất trong cái show mà sân khấu Trống Đồng thực hiện.<br><br> 
+
+
+
+									Sở thích: Du lịch, thời trang bụi <br><br>
+
+									Thể thao: Thể hình, bơi lội <br><br>
+
+									Niềm đam mê lớn nhất: Âm nhạc <br><br>
+
+									Người yêu kính nhất: Ba, Mẹ và anh Hoàng Tuấn <br><br>
+
+									Tính tình: Hiền nhưng quyết đoán <br><br>
+
+									Ca khúc thể hiện được yêu thích nhất: Đi về nơi xa, Kiếp ve sầu, Bước chân lẻ loi, Dòng sông băng, Tình khúc vàng, Mãi mãi một tình yêu… <br><br>
+
+									Nhạc sĩ yêu thích nhất: Vũ Thành, Tuấn Khanh <br><br>
+
+									Ca sĩ yêu thích nhất: Mỹ Linh, Thanh Lam, Whitney Houston, Mariah Carey. <br><br>
+
+									Ban nhạc yêu thích: Backstreetboys, Boyzone.
+								</div>
+							</div>
+
+							<div class="vertical2">
+								<h2>NGHỆ SĨ TƯƠNG TỰ</h2>
+								<div class="list-artist">
+									<div>
+										<div class="img-artist-small"><img src="nstt1.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>Hiền Thục</p>
+											<p>4,525 quan tâm</p>
+										</div>
+									</div>
+									<div>
+										<div class="img-artist-small"><img src="nstt2.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>Trịnh Thăng Bình</p>
+											<p>14,525 quan tâm</p>
+										</div>
+									</div>
+									<div>
+										<div class="img-artist-small"><img src="nstt3.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>Hồ Quỳnh Hương</p>
+											<p>20,256 quan tâm</p>
+										</div>
+									</div>
+									<div>
+										<div class="img-artist-small"><img src="nstt4.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>V.Music</p>
+											<p>10,203 quan tâm</p>
+										</div>
+									</div>
+									<div>
+										<div class="img-artist-small"><img src="nstt5.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>Maroon 5</p>
+											<p>21,203 quan tâm</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="third">
+						
+					</div>
+				</div>	
+			</div>
+
+			<div class="footer">
+				<div class="letter">
+					<ul>
+						<li><a href="#">Giới thiệu</a></li>
+						<li><a href="#">Copyright</a></li>
+						<li><a href="#">APIs</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Điều khoản</a></li>
+						<li><a href="#">Khuong MP3 VIP</a></li>
+						<li><a href="#">Liên hệ</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Quảng cáo</a></li>
+						<li><a href="#">Ứng dụng</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">FAQs</a></li>
+						<li><a href="#">Góp ý</a></li>
+					</ul>
+				</div>
+
+				<div class="icon">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-google-plus"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+
+			</div>
+			</div>
+		</div>
+	</body>
+</html>

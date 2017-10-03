@@ -1,0 +1,1339 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------THE HEADER--------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------*/
+.header{
+	background-color: #333;
+	height: 60px;
+	padding-left:  10%;
+	padding-right: 10%;
+	position: fixed;
+	z-index: 12;
+	width: 100%;
+}
+.header div{
+	float: left;
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------TÊN TRANG WEB--------------------------------------------------*/
+div.icon1{
+	width: 250px;
+	margin: 14px;
+}
+a{
+	text-decoration: none;
+}
+#logo{
+	color: white;
+	font-size: 35px;
+}
+span{
+	color: white;
+	margin-left: 15px;
+	font-size: 30px;
+	font-weight: bold;	
+	color: white;
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------SEARCH BOX--------------------------------------------------*/
+div.search{
+	width: 310px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.search input[type=text]{
+	width: 300px;
+	height: 36px;
+	border-radius: 6px;
+	padding: 10px;
+	outline: none;
+}
+.search input[type=text]:hover{
+	background-repeat: no-repeat;
+	background-size: 36px 36px;
+	background-position: top right;
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------THE MENU--------------------------------------------------*/
+.menu1{
+ 	padding-top: 20px;
+ 	padding-left: 100px;
+ 	height: 100%;
+ }
+ .menu1 a{
+ 	color: white;
+ 	font-size: 21px;
+ }
+/*--------------------------------------------------CÀI ĐẶT PHẦN PLAYLIST--------------------------------------------------*/
+.playlist .modalPlaylist{
+	position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    padding-top: 30px;
+    display: none;
+}
+/* CÀI ĐẶT NÚT X */
+.close{ 
+	position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #fff;
+    font-size: 30px;
+    z-index: 2;
+}
+.close:hover,.close:focus{
+    color: red;
+    cursor: pointer;
+}
+.myPlaylist {
+	width: 100%;
+	height: 100%;
+}
+/* CÀI ĐẶT CHO PHẦN HIỂN THỊ PLAYLIST SAU KHI THÍCH */
+.playlist .modalPlaylist .myPlaylist div{
+	border: 1px solid white;
+	border-top: none;
+	width: 266px;
+	height: 100px;
+	font-size: 25px;
+	color: white;
+	top: 135px;
+	padding: 10px;
+	position: absolute;
+}
+.playlist .modalPlaylist .playlist-content{
+	width: 100%;
+}
+.playlist .modalPlaylist .playlist-content div{
+	float: left;
+	width: 20%;
+	height: 50px;
+	border: 1px solid white;
+	text-align: center;
+}
+h1{
+	margin: auto;
+	color: white;
+}
+/* CÀI ĐẶT KHUNG THÔNG BÁO */
+#message{ 
+	position: fixed;
+	top: 30%;
+	left: 37%;
+    z-index: 2;
+    width: 25%;
+    height: 25%;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 2px 10px;
+    padding-top: 30px;
+    text-align: center;
+    display: none;
+}
+#message div{
+	font-size: 20px;
+	line-height: 30px;
+}
+/* CÀI ĐẶT CHO PHẦN NÚT OK CỦA THÔNG BÁO */
+#message .ok{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: 100px;
+	height: 25px;
+	border: none;
+	background-color: #f4511e;
+	color: white;
+	font-size: 16px;
+	border-radius: 20px;
+	cursor: pointer;
+	outline: none;
+}	
+
+/*---------------------------------------------INSTALL FOR THE PART OF LOGIN AND TO REGISTER--------------------------------------------------*/
+/*  CÀI ĐẶT CHUNG CHO PHẦN LOGIN VÀ TO REGISTER */
+.login-to-regsiter{
+	margin-top: 20px;
+	margin-left: 50px;
+}
+.login-to-regsiter a{
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+.login-to-regsiter a i:hover{
+	text-decoration: underline;
+}
+.login-to-regsiter label{
+	color: white;
+	font-size: 20px;
+}
+/*----------------------------------------------------LOGIN--------------------------------------------------------*/
+/* CÀI ĐẶT CHO MODAL */
+.login-to-regsiter .modal{
+	position: fixed;
+	display: none;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 30px;
+    z-index: 11 !important;
+}
+/* CÀI ĐẶT CHO MODAL-CONTENT */
+.login-to-regsiter .modal-content{
+	background-color: #fefefe; 
+    margin: auto;
+    border: 1px solid #888;
+    width: 40%;
+}
+.login-to-regsiter .modal-content label{
+	color: black;
+	margin: 8px 10px;
+}
+/* CÀI ĐẶT CHO NÚT X */
+.login-to-regsiter .modal .close{
+    position: absolute;
+    right: 420px;
+    top: 30px;
+    color: #000;
+    font-size: 40px;
+    z-index: 1;
+}
+/* HIỆU ỨNG CHO NÚT X */
+.login-to-regsiter .modal .close:hover,
+.login-to-regsiter .modal .close:focus{
+    color: red;
+    cursor: pointer;
+}
+/* CÀI ĐẶ CHO FORM ĐĂNG NHẬP */
+.login-to-regsiter .modal form{
+    border: 3px solid black;
+    width: 530px;
+    height: 750px;
+}
+.login-to-regsiter .modal input[type=text],
+input[type=password]{
+    width: 500px;
+    padding: 12px 20px;
+    margin: 8px 10px;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.login-to-regsiter .modal button.submit{
+    width: 500px;
+    background-color: #4acf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 30px 10px;
+    font-size: 20px;
+}
+.login-to-regsiter .modal button.cancelbtn{
+    padding: 10px 18px;
+    background-color: red;
+    border-radius: 5px;
+    margin: 15px 10px;
+    font-size: 15px;
+    border: none;
+}
+.login-to-regsiter .modal span.psw{
+    float: right;
+    padding-top: 16px; 
+    color: black;
+    font-size: 20px;
+}
+.login-to-regsiter .modal span.psw a{
+	color: green;
+	font-size: 15px;
+}
+.login-to-regsiter .modal .imgcontainer{
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+.login-to-regsiter .modal img.avatar{
+    width: 60%;
+    border-radius: 50%;
+}
+.login input[type=checkbox]{
+	margin: 15px 10px;
+}
+.login{
+	width: 500px;
+    padding: 0;
+}
+/*------------------------------------------------TO REGISTER-----------------------------------------------------*/
+/* CÀI ĐẶT CHO MODAL2 */
+.login-to-regsiter .modal2{
+	position: fixed;
+	display: none;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 80px;
+    z-index: 11 !important;
+}
+/* CÀI ĐẶT CHO MODAL-CONTENT2 */
+.login-to-regsiter .modal-content2{
+	background-color: #fefefe; 
+    margin: auto;
+    border: 1px solid #888;
+    width: 40%;
+    margin-top: 90px;
+}
+.login-to-regsiter .modal-content2 label{
+	color: black;
+	margin: 8px 10px;
+}
+/* CÀI ĐẶT CHO NÚT X */
+.login-to-regsiter .modal2 .close{
+    position: absolute;
+	top: 40px;
+	right: 340px;	
+    color: white;
+    font-size: 60px;
+    z-index: 1;
+    font-weight: bold;
+}
+/* HIỆU ỨNG CỦA NÚT X */
+.login-to-regsiter .modal2 .close:hover,
+.login-to-regsiter .modal2 .close:focus{
+    color: red;
+    cursor: pointer;
+}
+/* CÀI ĐẶT CHO FROM ĐĂNG KÝ */
+.login-to-regsiter .modal2 form{
+    border: 3px solid black;
+    width: 530px;
+    height: 400px;
+}
+.login-to-regsiter .modal2 input[type=text],
+input[type=password]{
+    width: 500px;
+    padding: 12px 20px;
+    margin: 8px 10px;
+    display: block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+/* CÀI ĐẶT CHO CÁC BUTTON CÓ TRONG FORM ĐĂNG KÝ */
+.login-to-regsiter .modal2 button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+.login-to-regsiter .modal2 button.cancelbtn{
+	background-color: red;
+}
+.login-to-regsiter .modal2 button.cancelbtn,
+.login-to-regsiter .modal2 button.signupbtn{
+	float: left;	
+	width: 50%;
+}
+.clearfix #message{
+	display: none;
+}
+.login-to-regsiter .modal2 .clearfix{
+	width: 100%;
+}
+.login-to-regsiter .modal2 .login2 input.check{
+	width: 20px;
+	height: 20px;
+	margin: 15px;
+}
+.login-to-regsiter .modal2 .login2{
+	width: 500px;
+ 	margin-top: 20px;
+}
+/* HIỆU ỨNG KHI FROM HIỆN RA */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------THE BODY----------------------------------------------------*/
+/*-----------------------------------------------------THE MOVEMENT PART------------------------------------------------*/
+.menu,.body-group{
+	display: inline-table;
+	margin-top: 60px;
+} 
+.movement-part{
+	width: 100%;
+	position: fixed;
+	top: 60px;
+}
+/* CÀI ĐẶT CHO 2 NÚT BACK, NEXT */
+.body  .movement-part .back{
+	position: absolute;
+	cursor: pointer;
+	top: 50%;
+	left: 0;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+  	border-radius: 0 3px 3px 0;
+}
+.body .movement-part .next{
+	position: absolute;
+	cursor: pointer;
+	top: 50%;
+	right: 0;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+  	border-radius: 3px 0 0 3px ;
+}
+.body  .movement-part:hover .back,
+.body .movement-part:hover .next{
+	background-color: #333;
+}
+/*----------------------------------------------------------THE MENU----------------------------------------------------*/
+/* CÀI ĐẶT CHO MODAL3 */
+.modal3{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.8);
+	z-index: 100;
+	top: 0;
+	left: 0;
+	position: fixed;
+	overflow: auto;
+	padding-top: 60px;
+	display: none;
+}
+/* CÀI ĐẶT CHO MODAL-CONTENT3 */
+.modal-content3{
+	background-color: #fefefe; 
+    margin: auto;
+    border: 1px solid #888;
+    width: 40%;
+    margin-top: 90px;
+}
+/* NÚT X */
+.modal3 .close{
+    position: absolute;
+	top: 40px;
+	right: 340px;	
+    color: white;
+    font-size: 60px;
+    z-index: 1;
+    font-weight: bold;
+}
+/* HIỆU ỨNG NÚT X */
+.modal3 .close:hover,
+.modal3 .close:focus{
+    color: red;
+    cursor: pointer;
+}
+/* CÀI ĐẶT CHO KHUNG MENU */
+.modal3 form{
+    border: 3px solid black;
+    width: 270px;
+    height: 400px;
+}
+.small-menu div{
+	display: block;
+	width: 100%;
+	line-height: 35px;
+	font-size: 30px;
+	text-align: center;
+}
+.small-menu div a{
+	color: black;
+}
+.small-menu div a:hover{
+	color: #9900cc;
+}
+/*----------------------------------------------------------THE BODY GROUP---------------------------------------------*/
+/*-------------------------------------------------------INSTALL FOR BODY-GROUP---------------------------------------------*/
+/* CÀI ĐẶT CHUNG CHO TOÀN BỘ PHẦN  BODY-GROUP */
+.body-group{
+	top: 200px;
+	width: 80%;
+	height: 100%;
+	float: right;
+	margin-right: 10%;
+	margin-left: 10%;
+	background-color: white;
+}
+/* CÀI ĐẶT CHO TỪNG THẺ INPUT */
+.body-group .tabs input{
+    position:absolute;
+    top:0;
+    left:0;
+    display:none;   
+}
+/* CÀI ĐẶT CHO CÁC LABEL TRONG THẺ INPUT */
+.body-group .tabs label{
+    width: 25%;
+    display:block;
+    float:left;
+    position:relative;
+    padding: 10px 15px;
+    line-height:1.5em;
+    min-width:55px;
+    text-align:center;
+    color: black;
+    font-size: 20px;
+    font-weight:bold;
+    letter-spacing:1px;
+    cursor:pointer;
+    background:-moz-linear-gradient(top, #5ba4a4 0%, #4e8c8a 100%);
+    background-color: white;
+    border: 1px solid silver;
+    border-radius: 5px;
+    opacity: 0.85;
+}
+.body-group .tabs label:after{
+    content:"";
+    display:block;
+    position:absolute;
+    width:100%;
+    left:0;
+    bottom:-5px;
+}
+.body-group .clear-shadow{
+    clear:both; 
+}
+/* CÀI ĐẶT CHO PHẦN NỘI DUNG TRONG THẺ INPUT */
+.body-group .content{
+    z-index:5 !important;
+}
+.content div.content-1,
+.content div.content-2,
+.content div.content-3,
+.content div.content-4{
+    position:absolute;
+    overflow:hidden;
+    opacity:0;
+    padding:10px 0 0 0; 
+    transition:opacity .4s;
+}
+.tabs input:checked + label{
+    background-color:#fff;
+    z-index:6;  
+    border-radius: 4px;
+	box-shadow: 0 0 8px rgba(0,0,0,0.15);
+	color: red;
+	border: 1px solid #ff0000;
+	transition: all 1s 0.1s;
+}
+/* CÀI ĐẶT CHO CÁC THẺ INPUT KHI CLICK CHUỘT VÀO */
+.tabs input.tab-selector-1:checked ~ .content .content-1,
+.tabs input.tab-selector-2:checked ~ .content .content-2,
+.tabs input.tab-selector-3:checked ~ .content .content-3,
+.tabs input.tab-selector-4:checked ~ .content .content-4{
+    opacity:1;
+    z-index:10 !important;
+}   
+.body-group .content{
+	margin-left: 9%;
+	margin-right: 9%;
+	height: 2600px;
+} 
+h2{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #ff0000	;
+	margin: 15px 0;	
+	font-size: 20px;
+}
+h3{	
+	font-family:Arial, Helvetica, sans-serif;
+	color: white;
+	margin: 0;	
+	font-size: 25px;
+}
+/*----------------------------------------------INSTALL FOR EACH PART OF THE CONTENT-1---------------------------------------------*/
+.content-1{
+	width: 80%;
+	height: 2600px;
+}
+/*------------------------------------------------------SONG AND VIDEO ---------------------------------------------*/
+/*--------------------------------------------------KHUNG CỦA TỪNG BÀI HÁT--------------------------------------------------*/
+div.first{
+	display: inline-table;
+	width: 200px;
+	margin-left: 15px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	opacity: 0.85;
+	z-index: 1;
+}
+.first{
+	border: 1px solid #e1e1e1;
+	width: 220px;
+	height: 300px;
+	border-radius: 4px;
+	box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+.first img,.sentences{
+	margin-left: 10px;
+	cursor: pointer;
+	z-index: 9;
+}
+.first img:hover{
+	border: 1px solid #9900cc;
+	border-radius: 4px;
+}
+/* CÀI ĐẶT PHẦN TÊN BÀI HÁT, TÊN CA SĨ */
+.sentences{ 
+	padding: 10px;
+	margin-left: 15px;
+}
+.sentences h3 a{
+	color: #000;
+	font-size: 20px;
+}
+.sentences a{
+	line-height: 1.5em;
+	text-decoration: none;
+  	color: #777;
+}
+ /* CÀI ĐẶT NÚT THÍCH */
+div.first button{
+	margin-left: 50px;
+	width: 100px;
+	height: 25px;
+	border: none;
+	background-color: #4acf50;
+	color: white;
+	font-size: 16px;	
+	cursor: pointer;
+	outline: none;
+	position: relative;
+	overflow: hidden;
+}
+/* CÀI ĐẶT HIỆU ỨNG CHO NÚT THÍCH */
+div.first button:after{ 
+	position: absolute;
+	background-color: #90EE90;
+	content: "";
+	padding-top: 300%;
+	padding-left: 350%;
+	margin-left: -20px !important; 
+	margin-top: -120%;
+	display: block;
+	transition: all 1s;
+	opacity: 0;
+}
+div.first button:active:after{
+	opacity: 1;
+	transition: 0s;
+	padding:0;
+	margin: 0;
+}
+/*------------------------------------------------------NEWS MUSIC ---------------------------------------------*/
+.news-music{ 
+	width: 80%;
+	height: 700px;
+}
+.news-music ul{
+	display: inline-table;
+	width: 48.5%;
+	height: 630px;
+	list-style-type: none;
+	margin-left: 10px;
+	padding-left: 80px;
+}
+.news-music ul li{
+	height: 200px;
+	width: 100%;	
+}
+.news-music ul li a{
+	text-decoration: none;
+}
+.news-music ul li a img{
+	float: left;
+}
+.news-music ul li p{
+	color: white;
+	width: 250px;
+	padding-top:90px; 
+}
+.news-music ul li p a{
+	color: white;
+}
+/* CHÈN HÌNH ẢNH VÀO TRONG PHẦN TIN TỨC */
+.news-music ul:first-child li:first-child{
+	background-image: url('Tin tức/01.jpg');
+	background-repeat: no-repeat;
+	background-size: 250px 130px;
+}
+.news-music ul:first-child li:nth-child(2){
+	background-image: url('Tin tức/02.gif');
+	background-repeat: no-repeat;
+	background-size: 250px 130px;
+}
+.news-music ul:first-child li:nth-child(3){
+	background-image: url('Tin tức/03.jpg');
+	background-repeat: no-repeat;
+	background-size: 250px 130px;
+}
+.news-music ul:nth-child(2) li:nth-child(1){
+	background-image: url('Tin tức/04.jpg');
+	background-repeat: no-repeat;
+	background-size: 250px 130px;
+}
+.news-music ul:nth-child(2) li:nth-child(2){
+	background-image: url('Tin tức/05.jpg');
+	background-repeat: no-repeat;
+	background-size: 250px 130px;
+}
+.news-music ul:nth-child(2) li:nth-child(3){
+	background-image: url('Tin tức/06.jpg');
+	background-repeat: no-repeat;
+	background-size: 250px 130px;
+}
+/*--------------------------------------------------------HOT ARSTIST------------------------------------------------------*/
+.hot-artist{
+	width: 80%;
+	height: 240px;
+	margin-left: 10px;
+}
+.hot-artist ul{
+    list-style-type: none;
+    width: 100%;
+}
+.hot-artist ul li{
+    width: 100px;
+    height: 112px;
+    display: inline-table;
+    margin: 0 11px 11px 0;
+    float: left;
+}
+.hot-artist ul li a::before{
+    position: absolute;
+    width: 100px;
+    height: 112px;
+    background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+    opacity: 0;
+    content: '';
+    transform: translate3d(0,0,0);
+}
+.hot-artist ul li a h2{
+    position: absolute;
+    text-align: center;
+    color: white;
+    width: 100px;
+    opacity: 0;
+    transition: transform 1s, color 0.35s;
+    transform: translate3d(0,-50%,0);
+    transition: opacity 0.35s, transform 1s; 
+}
+.hot-artist ul li:hover h2{
+    color: #fff;
+    transform: translate3d(0,-50%,0) translate3d(0,-60px,0);
+    opacity: 1;
+}
+.hot-artist ul li:first-child a::before{
+    position: absolute;
+    width: 180px;
+    height: 234px;
+    background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+    opacity: 0;
+    content: '';
+    transform: translate3d(0,0,0);
+}
+.hot-artist ul li:first-child a h2{
+    position: absolute;
+    text-align: center;
+    color: white;
+    width: 200px;
+    opacity: 0;
+    transition: transform 1s, color 0.35s opacity 0.35s;
+    transform: translate3d(0,-50%,0);
+}
+.hot-artist ul li:first-child:hover h2{
+    color: #fff;
+    transform: translate3d(0,-50%,0) translate3d(0,-140px,0);
+    opacity: 1;
+}
+.hot-artist ul li:hover a::before{
+    transition: opacity 0.35s, transform 0.35s;
+    opacity: 1;
+}
+.hot-artist ul li:first-child{
+    width: 180px;
+    height: 234px;
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------THE FOOTER--------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------*/
+.footer{
+	background-color: #333;
+	width: 100%;
+	height: 220px;
+	padding-left: 15%;
+	padding-right: 15%;	
+	margin-top: 2500px;
+	position: absolute;
+}
+.footer div{
+	display: inline-table;
+}
+.footer div.letter ul{
+	list-style-type: none;
+	width: 200px;
+	height: 150px;
+ 	display: inline-table;
+}
+.footer div.letter ul li{
+	height: 50px;
+	padding: 15px 15px 15px 30px;
+}
+.footer div.letter ul li a{
+	text-decoration: none;
+	color: silver;
+}
+.footer div.icon{
+	margin-left: 15px;
+}
+.footer div.icon a{
+	display: block;
+	background-color: silver;
+	text-align: center;
+	margin-top: 10px;
+	padding: 2px;
+	border-radius: 5px;
+}
+.footer div.icon a i{
+	font-size: 35px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------THE SONG OF VIET NAM--------------------------------------------*/
+.content-2{
+	width: 80%;
+	height: 2600px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------THE VIDEO  OF VIET NAM------------------------------------------*/
+.content-3{
+	width: 80%;
+	height: 2600px;
+}
+/*----------------------------------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------THE CHARTS  OF VIET NAM-----------------------------------------*/
+.content-4{
+	height: 2600px;
+}
+ .charts,.video{
+	float: left;
+}
+.album{
+	width: 365px;
+	height: 1000px;
+	margin-left: 300px;
+}
+.content-4 .h3{
+	margin-left: 360px;
+}
+/*---------------------------------------------------------THE SONG CHARTS----------------------------------------------*/
+/* INSTALL FOR LABEL AND CONTENT */
+.charts{
+	height:1580px;
+	width: 365px;
+}
+.video{
+	width: 365px;
+	margin-left: 160px;
+	height: 1580px;
+}
+.small-tabs input{
+    position:absolute;
+    top:0;
+    left:0;
+    display:none;   
+}
+ .small-tabs label{
+    width: 120px !important;
+    height: 80px;
+    display: block;
+    float: left;
+    position: relative;
+    padding: 0;
+    line-height: 1.5em;
+    min-width :55px;
+    text-align:center;
+    font-size: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background:-moz-linear-gradient(top, #5ba4a4 0%, #4e8c8a 100%);
+}
+.small-tabs label:after{
+    content:"";
+    display: block;
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    bottom: -5px;
+}
+.small-clear-shadow{
+    clear:both; 
+}
+ .small-content{
+    position:relative;
+    z-index:15 !important;
+}
+.small-content div.small-content-1,
+.small-content div.small-content-2,
+.small-content div.small-content-3{
+    position:absolute;
+    overflow:hidden;
+    width: 400px;
+    opacity:0;
+    padding: 10px 0 0 0; 
+    transition: opacity .4s;
+}
+.small-tabs input:checked + label{
+    background: #fff;
+    z-index: 11;  
+}
+.small-content div ul li{
+    height: 130px;
+    width: 4000px;   
+}
+.small-tabs input.small-tab-selector-1:checked ~ .small-content .small-content-1,
+.small-tabs input.small-tab-selector-2:checked ~ .small-content .small-content-2,
+.small-tabs input.small-tab-selector-3:checked ~ .small-content .small-content-3{
+    opacity:1;
+    z-index:17 !important;
+}  
+/* INSTALL FOR DETAIL OF CONTENT */
+/*----------------------------------------------------THE SONG CHARTS OF VIETNAM ----------------------------------------------*/                                                                                            
+.small-content #id ul{
+	list-style-type: none;
+	width: 400px;
+	height:1500px;
+}
+.small-content #id ul li{
+	height: 130px;
+	width: 100%;
+	border-bottom: 1px solid #777;
+	margin-bottom: 10px;
+}
+/* CHÈN HÌNH ẢNH VÀO BXH BÀI HÁT VIỆT NAM */
+.small-content .small-content-1 ul li:first-child{
+	background-image:  url('BXH/Bài hát/Việt Nam/01.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-1 ul li:nth-child(2){
+	background-image:  url('BXH/Bài hát/Việt Nam/02.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-1 ul li:nth-child(3){
+	background-image: url('BXH/Bài hát/Việt Nam/03.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-1 ul li:nth-child(4){
+	background-image:  url('BXH/Bài hát/Việt Nam/04.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-1 ul li:nth-child(5){
+	background-image: url('BXH/Bài hát/Việt Nam/05.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-1 ul li:nth-child(6){
+	background-image:  url('BXH/Bài hát/Việt Nam/06.png');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-1 ul li:nth-child(7){
+	background-image:  url('BXH/Bài hát/Việt Nam/07.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-1 ul li:nth-child(8){
+	background-image: url('BXH/Bài hát/Việt Nam/08.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-1  ul li:nth-child(9){
+	background-image:  url('BXH/Bài hát/Việt Nam/09.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-1 ul li:nth-child(10){
+	background-image: url('BXH/Bài hát/Việt Nam/010.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+/* CÀI ĐĂT CHO CHỮ TRONG CÁC VỊ TRÍ TRONG BXH */
+.small-content #id ul li div{
+	float: left;
+	font-size: 35px;
+	margin-bottom: 10px;
+	color: white;
+}
+.small-content #id ul li div:first-child{
+	margin-top: 80px;
+}
+.small-content #id ul li div:nth-child(2){
+	margin-top: 75px;
+	font-size: 22px;
+	margin-left: 20px;
+	position: relative;
+}
+.small-content #id ul li div:nth-child(2) p a{
+	text-decoration: none;
+	color: white;
+}
+.small-content #id ul li div:nth-child(2) p:nth-child(2) a{
+	font-size: 18px;
+}
+/*--------------------------------------------------THE SONG CHARTS OF USUK  ----------------------------------------------*/                                                                                            
+/* CHÈN HÌNH ẢNH VÀO TRONG BXH BÀI HÁT USUK */
+.small-content .small-content-2 ul li:first-child{
+	background-image:  url('BXH/Bài hát/Âu Mỹ/01.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-2 ul li:nth-child(2){
+	background-image:  url('BXH/Bài hát/Âu Mỹ/02.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-2 ul li:nth-child(3){
+	background-image:  url('BXH/Bài hát/Âu Mỹ/03.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-2 ul li:nth-child(4){
+	background-image:  url('BXH/Bài hát/Âu Mỹ/04.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-2 ul li:nth-child(5){
+	background-image:  url('BXH/Bài hát/Âu Mỹ/05.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-2 ul li:nth-child(6){
+	background-image:  url('BXH/Bài hát/Âu Mỹ/06.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-2 ul li:nth-child(7){
+	background-image:  url('BXH/Bài hát/Âu Mỹ/07.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-2 ul li:nth-child(8){
+	background-image:  url('BXH/Bài hát/Âu Mỹ/08.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-2 ul li:nth-child(9){
+	background-image:  url('BXH/Bài hát/Âu Mỹ/09.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-2 ul li:nth-child(10){
+	background-image:  url('BXH/Bài hát/Âu Mỹ/10.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+/*--------------------------------------------------THE SONG CHARTS OF KOREA ----------------------------------------------*/                                                                                            
+/* CHÈN HÌNH ẢNH VÀO BXH BÀI HÁT KOREA */
+.small-content .small-content-3 ul li:first-child{
+	background-image:  url('BXH/Bài hát/Hàn Quốc/01.png');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-3 ul li:nth-child(2){
+	background-image:  url('BXH/Bài hát/Hàn Quốc/02.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-3 ul li:nth-child(3){
+	background-image:  url('BXH/Bài hát/Hàn Quốc/03.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-3 ul li:nth-child(4){
+	background-image:  url('BXH/Bài hát/Hàn Quốc/04.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-3 ul li:nth-child(5){
+	background-image:  url('BXH/Bài hát/Hàn Quốc/05.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-3 ul li:nth-child(6){
+	background-image:  url('BXH/Bài hát/Hàn Quốc/06.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-3 ul li:nth-child(7){
+	background-image:  url('BXH/Bài hát/Hàn Quốc/07.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-3 ul li:nth-child(8){
+	background-image:  url('BXH/Bài hát/Hàn Quốc/08.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-3 ul li:nth-child(9){
+	background-image:  url('BXH/Bài hát/Hàn Quốc/09.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.small-content .small-content-3 ul li:nth-child(10){
+	background-image:  url('BXH/Bài hát/Hàn Quốc/10.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+/*---------------------------------------------------------THE VIDEO CHARTS-------------------------------------------------------*/
+/*--------------------------------------------------THE VIDEO CHARTS OF VIETNAM----------------------------------------------*/                                                                                                                                                                                  */
+/* CHÈN HÌNH ẢNH VÀO BXH VIDEO VIỆT NAM*/
+.video .small-content .small-content-1 ul li:first-child{
+	background-image:  url('BXH/Video/Việt Nam/01.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-1 ul li:nth-child(2){
+	background-image:  url('BXH/Video/Việt Nam/02.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-1 ul li:nth-child(3){
+	background-image: url('BXH/Video/Việt Nam/03.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-1 ul li:nth-child(4){
+	background-image:  url('BXH/Video/Việt Nam/04.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-1 ul li:nth-child(5){
+	background-image: url('BXH/Video/Việt Nam/05.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-1 ul li:nth-child(6){
+	background-image:  url('BXH/Video/Việt Nam/06.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-1 ul li:nth-child(7){
+	background-image:  url('BXH/Video/Việt Nam/07.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-1 ul li:nth-child(8){
+	background-image: url('BXH/Video/Việt Nam/08.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-1  ul li:nth-child(9){
+	background-image:  url('BXH/Video/Việt Nam/09.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-1 ul li:nth-child(10){
+	background-image: url('BXH/Video/Việt Nam/10.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+/*--------------------------------------------------THE VIDEO CHARTS OF USUK ----------------------------------------------*/                                                                                                                                                                                  */
+/* CHÈN HÌNH ẢNH VÀO BXH VIDEO USUK */                           
+.video .small-content .small-content-2 ul li:first-child{
+	background-image:  url('BXH/Video/Âu Mỹ/01.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-2 ul li:nth-child(2){
+	background-image:  url('BXH/Video/Âu Mỹ/02.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-2 ul li:nth-child(3){
+	background-image: url('BXH/Video/Âu Mỹ/03.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-2 ul li:nth-child(4){
+	background-image:  url('BXH/Video/Âu Mỹ/04.png');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-2 ul li:nth-child(5){
+	background-image: url('BXH/Video/Âu Mỹ/05.png');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-2 ul li:nth-child(6){
+	background-image:  url('BXH/Video/Âu Mỹ/06.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-2 ul li:nth-child(7){
+	background-image:  url('BXH/Video/Âu Mỹ/07.png');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-2 ul li:nth-child(8){
+	background-image: url('BXH/Video/Âu Mỹ/08.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-2  ul li:nth-child(9){
+	background-image:  url('BXH/Video/Âu Mỹ/09.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-2 ul li:nth-child(10){
+	background-image: url('BXH/Video/Âu Mỹ/10.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+/*--------------------------------------------------THE VIDEO CHARTS OF KOREA-----------------------------------------------------*/                                                                                                                                                                                  */
+/* CHÈN HÌNH ẢNH VÀO BXH VIDEO KOREA*/
+.video .small-content .small-content-3 ul li:first-child{
+	background-image:  url('BXH/Video/Hàn Quốc/01.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-3 ul li:nth-child(2){
+	background-image:  url('BXH/Video/Hàn Quốc/02.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-3 ul li:nth-child(3){
+	background-image: url('BXH/Video/Hàn Quốc/03.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-3 ul li:nth-child(4){
+	background-image:  url('BXH/Video/Hàn Quốc/04.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-3 ul li:nth-child(5){
+	background-image: url('BXH/Video/Hàn Quốc/05.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-3 ul li:nth-child(6){
+	background-image:  url('BXH/Video/Hàn Quốc/06.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-3 ul li:nth-child(7){
+	background-image:  url('BXH/Video/Hàn Quốc/07.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-3 ul li:nth-child(8){
+	background-image: url('BXH/Video/Hàn Quốc/08.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-3  ul li:nth-child(9){
+	background-image:  url('BXH/Video/Hàn Quốc/09.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+.video .small-content .small-content-3 ul li:nth-child(10){
+	background-image: url('BXH/Video/Hàn Quốc/10.jpg');
+	background-size: 100% 130px; 
+	cursor: pointer;
+}
+/*--------------------------------------------------TRANG CÁ NHÂN----------------------------------------------*/                                                                                                                                                                                  */
+/* CHÈN HÌNH ẢNH VÀ TÊN TÀI KHOẢN */
+div.username{
+	width: 200px;
+	height: 100%;
+}
+div.username .private-image{
+	margin: 10px 0 0 20px;
+	cursor: pointer;
+}
+div.username a{
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	margin-left: 20px;
+	position: relative;
+	top: 20px;
+}
+div.privateInfor{
+	width: 300px;
+	height: 200px;	
+	background-color: white;
+	display: none;
+	position: absolute;
+	top: 60px;
+}
+.privateInfor ul{
+	width: 100%;
+	height: 100%;
+	box-shadow: 10px 5px 10px;
+	list-style-type: none;
+}
+.privateInfor ul li{
+	width: 100%;
+	height: 20%;
+}
+.privateInfor ul li a{
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	top: 10px;
+}
+.privateInfor ul li a:hover{
+	color: #9900cc;
+}

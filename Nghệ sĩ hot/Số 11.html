@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hatsune Miku | Nghệ sĩ</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="Chung.css">
+		<style>
+			.second .bg-img{
+			    width: 100%;
+			    height: 243px;
+			    background-image: url('11.11.jpg');
+			    position: relative;
+			}
+		</style>
+		<script type="text/javascript" src="Chung.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			
+			<div class="header">
+				<!-- THIS IS LOGO -->
+				<div class="icon1">
+					<a href="#">
+						<i class="fa fa-music" id="logo"></i>
+						<span>MjuDic Online</span>
+					</a>
+				</div>
+
+				<!-- THIS IS SEARCH BOX -->
+				<div class="search">
+					<input type="text" placeholder="Nhập nội dung cần tìm">
+				</div>
+
+				<div class="menu1">
+					<a href="#"><i class="fa fa-bars" id="id2" onclick="document.getElementById('id03').style.display=
+					'block'"> Menu</i></a>
+					<div id="id03" class="modal3">
+					  	<span onclick="document.getElementById('id03').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content3 animate">
+							<div class="small-menu">
+								<div><a href="E:\The study\HTML + CSS + JS + BOOTRAP\Project 2/Project 2.html">Trang chủ</a></div>
+								<div><a href="#">Nhạc cá nhân</a></div>
+								<div><a href="#">Album</a></div>
+								<div><a href="#">Video</a></div>
+								<div><a href="#">Nghệ sĩ</a></div>
+								<div><a href="#">BXH</a></div>
+							    <div><a href="#">Chủ đề</a></div>
+							    <div><a href="#">Top 100</a></div>
+							    <div><a href="#">Radio</a></div>
+							    <div><a href="#">VIP</a></div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<!-- THIS IS LOGIN AND TO REGISTER-->
+				<div class="login-to-regsiter">
+
+					<!-- LOGIN -->
+					<a onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"> Đăng nhập</i></a>
+					<div id="id01" class="modal">
+					  	<span onclick="document.getElementById('id01').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content animate" onsubmit=" return KTDN();" name="dangnhap">
+							<div class="imgcontainer">
+								<img src="E:\The study\HTML + CSS + JS + BOOTRAP\Project 2\Introduction/12.jpg" width="100%" class="avatar">
+							</div>
+							<div class="login">
+								<label><b>Account</b></label>
+								<input type="text" name="username" placeholder="Enter your user name"  required>
+								
+								<label><b>Password</b></label>
+								<input type="password" name="psw" placeholder="Enter your password" required>
+								<span id="loi-psw" style="color: red;font-size: 20px;"></span><br>
+
+								<button type="submit" class="submit">Login</button>
+								<input type="checkbox"> Remember me
+							</div>
+
+							<div class="login">
+								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+								<span class="psw">Forgot <a href="#"> password ?</a></span>
+							</div>
+						</form>
+					</div>
+
+					<label>/</label>
+
+					<!-- TO REGISTER-->
+					<a onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-key"> Đăng ký</i></a>
+					<div id="id02" class="modal2">
+					  	<span onclick="document.getElementById('id02').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content2 animate" onsubmit="return KTDK();" name="dangky">
+							<div class="to-regsiter">
+								<label><b>Account</b></label>
+							    <input type="text" placeholder="Enter account" name="acc"  id="acc" required>
+							    <span id="loi-acc" style="color: red;font-size: 20px;"></span><br>
+
+							    <label><b>Password</b></label>
+							    <input type="password" placeholder="Enter Password" name="psw" required>
+
+							    <label><b>Repeat Password</b></label>
+							    <input type="password" placeholder="Repeat Password" name="psw2" required>
+							    <span id="loi-psw2" style="color: red;font-size: 20px;"></span><br>
+
+							    <input type="checkbox" checked="checked"> Remember me
+
+							    <div class="clearfix">
+							      <button type="button" onclick="document.getElementById('id02').style.display='none'"  class="cancelbtn">Cancel</button>
+							      <button type="submit" class="signupbtn">Sign Up</button>
+							    </div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="body">
+				<!-- THIS IS SLIDESHOW -->
+				<div class="movement-part">
+					<img src="E:/The study/HTML + CSS + JS + BOOTRAP/Project 2/Introduction/01.jpg" name="image" id="image" alt="" style="width: 100%;" height="600px">
+					<a class="back" onclick="back();">&#10094;</a>
+					<a class="next" onclick="next();">&#10095;</a>
+				</div>
+
+				<!-- THE OTHER PART -->
+				<div class="other-part">
+					<div class="first">
+						
+					</div>
+
+					<div class="second">
+						<div class="bg-img">
+							<div class="img-artist"><img src="011.jpg" width="150px" height="150px"></div>
+							<div class="artist-infor">
+								<h1>Hatsune Miku</h1>
+								<p>Hatsune Miku (初音ミク) là nhân vật Nhật Bản đầu tiên trong series Vocaloid2 được tạo ra bởi công ty Crypton Future Media. Được xem như là Vocaloid phổ biến và biết đến nhiều nhất. Tên và nhân vật của phần mềm đã được...Tiểu sử Hatsune Miku</p>
+							</div>
+						</div>
+						<div class="introduce-artist">
+							<div class="vertical1">
+								<h2>TIỂU SỬ HÒA HATSUNE MIKU</h2>
+								<div>
+									Tên thật: Hatsune Miku <br><br>
+
+									Ngày sinh: 31/08/2007<br><br>
+
+									Thể loại: Nhật Bản, Pop / Ballad, Pop / Dance Quốc Gia: Japan Hatsune Miku (初音ミク) là nhân vật Nhật Bản đầu tiên trong series Vocaloid2 được tạo ra bởi công ty Crypton Future Media. Được xem như là Vocaloid phổ biến và biết đến nhiều nhất. Tên và nhân vật của phần mềm đã được chọn bằng cách kết hợp chữ Hatsu(初, đầu tiên), Ne(音,âm thanh) và Miku (未来, future), có nghĩa là “âm thanh đầu tiên từ tương lai”. Dữ liệu của giọng hát được tạo ra từ mẫu giọng của Fujita Saki (藤田 咲) - một seiyuu người Nhật. <br><br>
+
+									Doanh số bán ra của Hatsune Miku quá cao đến nỗi Crypton không thể đáp ứng kịp nhu cầu. Trong 12 ngày đầu bán ra, có gần tới 3000 đơn đặt hàng .Đây là một doanh số trong số 250 trong nền công nghiệp phần mềm âm nhạc, trích dẫn như là” một con số không thể” bởi Sasaki Wataru - người chịu trách nhiệm việc lên kế hoạch và chiến dịch gây bất ngờ của sản phẩm. Amazon.co.jp bắt đầu bán vào ngày 12 tháng 9 năm 2007 và tổng cộng doanh số bán ra của Hatsune Miku là 57 500 001 yen, khiến cô ấy trở thành phần mềm bán chạy số một vào lúc đó. <br><br>
+
+									Một manga có tên “Maker Hikōshiki Hatsune Mix” được đăng dài kì trên tờ tạp chí truyện tranh Nhật Comic Rush vào ngày 26 tháng 11 năm 2007,xuất bản bởi Jive.Manga được vẽ bởi Kei ,người thiết kế nhân vật gốc của Miku. Manga thứ hai tên là Hachune Miku no Nichijō Roipara! vẽ bởi Ontama bắt đầu được đăng dài kì trên tờ tạp chí manga Comp Ace vào ngày 26 tháng 12 năm 2007, xuất bản bởi Kadokawa Shoten. Đôi khi Miku cũng mang kính trong manga ,và Rin và Len gọi cô là “onee-chan~”(chị ). Một trang web truyện tranh yonkoma tạo ra bởi họa sĩ Minami nói rằng Chibi Miku-san có thể tìm thấy trên trang web của anh ấy, hoặc trên trang Danbooru Miku trong mẫu HRP-4C. <br><br>
+
+									Crypton có ý tưởng trong việc phát hành Miku như là “1 android diva trong thế giới tương lai gần, nơi mà những bài hát bị mất đi”. Khi Kei minh họa Miku, ông đã yêu cầu được vẽ Miku như là một android và màu của cô (dựa trên màu xanh lam-lục của chữ kí YAMAHA trên nhạc cụ tổng hợp âm nhạc điện tử.). Crypton cũng cho ông chi tiết về những khái niệm, tuy nhiên, Crypton nói rằng không phải dễ để giải thích “Vocaloid” là như thế nào với Kei và Kei nói ông không thể có bất cứ hình ảnh nào về “một cái máy vi tính biết hát” vào lần đầu tiên và ông thậm chí còn không biết “nhạc cụ tống hợp âm nhạc điện tử” là cái gì, và đã mất khoảng hơn 1 tháng. Thiết kế của váy Miku và ống giày hoàn toàn dựa trên màu của chương trình nhạc cụ tổng hợp âm nhạc điện tử và những thanh màu xanh đại diện cho những thanh thực tế,theo ý tưởng của Crypton. Ban đầu Miku dự định có kiểu tóc khác, nhưng Kei lại thích cái ý tưởng hai bím tóc hai bên sau khi thử chúng.<br><br>
+									
+									Miku thường hay bị nhầm lẫn là Vocaloid đầu tiên được tạo ra bởi những người mới hoặc lạ hoắc trong lịch sử các phần mềm, hay là Vocaloid2 đầu tiên được tạo nên. Trong khi cô là Vocaloid2 đầu tiên được bán ở thị trường Nhật, thì Sweet Ann của PowerFX lại xin được là Vocaloid2 đầu tiên được bán ra, cô ấy đã bán ra trước Miku 2 tháng.
+								</div>
+							</div>
+
+							<div class="vertical2">
+								<h2>NGHỆ SĨ TƯƠNG TỰ</h2>
+								<div class="list-artist">
+									<div>
+										<div class="img-artist-small"><img src="nstt1.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>Hiền Thục</p>
+											<p>4,525 quan tâm</p>
+										</div>
+									</div>
+									<div>
+										<div class="img-artist-small"><img src="nstt2.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>Trịnh Thăng Bình</p>
+											<p>14,525 quan tâm</p>
+										</div>
+									</div>
+									<div>
+										<div class="img-artist-small"><img src="nstt3.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>Hồ Quỳnh Hương</p>
+											<p>20,256 quan tâm</p>
+										</div>
+									</div>
+									<div>
+										<div class="img-artist-small"><img src="nstt4.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>V.Music</p>
+											<p>10,203 quan tâm</p>
+										</div>
+									</div>
+									<div>
+										<div class="img-artist-small"><img src="nstt5.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>Maroon 5</p>
+											<p>21,203 quan tâm</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="third">
+						
+					</div>
+				</div>	
+			</div>
+
+			<div class="footer">
+				<div class="letter">
+					<ul>
+						<li><a href="#">Giới thiệu</a></li>
+						<li><a href="#">Copyright</a></li>
+						<li><a href="#">APIs</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Điều khoản</a></li>
+						<li><a href="#">Khuong MP3 VIP</a></li>
+						<li><a href="#">Liên hệ</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Quảng cáo</a></li>
+						<li><a href="#">Ứng dụng</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">FAQs</a></li>
+						<li><a href="#">Góp ý</a></li>
+					</ul>
+				</div>
+
+				<div class="icon">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-google-plus"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+
+			</div>
+			</div>
+		</div>
+	</body>
+</html>

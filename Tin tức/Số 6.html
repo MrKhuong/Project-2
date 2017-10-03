@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Website bán vé đêm nhạc Hardwell quá tải</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="Chung.css">
+		<script type="text/javascript" src="Chung.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			
+			<div class="header">
+				<!-- THIS IS LOGO -->
+				<div class="icon1">
+					<a href="#">
+						<i class="fa fa-music" id="logo"></i>
+						<span>MjuDic Online</span>
+					</a>
+				</div>
+
+				<!-- THIS IS SEARCH BOX -->
+				<div class="search">
+					<input type="text" placeholder="Nhập nội dung cần tìm">
+				</div>
+
+				<div class="menu1">
+					<a href="#"><i class="fa fa-bars" id="id2" onclick="document.getElementById('id03').style.display=
+					'block'"> Menu</i></a>
+					<div id="id03" class="modal3">
+					  	<span onclick="document.getElementById('id03').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content3 animate">
+							<div class="small-menu">
+								<div><a href="E:\The study\HTML + CSS + JS + BOOTRAP\Project 2/Project 2.html">Trang chủ</a></div>
+								<div><a href="#">Nhạc cá nhân</a></div>
+								<div><a href="#">Album</a></div>
+								<div><a href="#">Video</a></div>
+								<div><a href="#">Nghệ sĩ</a></div>
+								<div><a href="#">BXH</a></div>
+							    <div><a href="#">Chủ đề</a></div>
+							    <div><a href="#">Top 100</a></div>
+							    <div><a href="#">Radio</a></div>
+							    <div><a href="#">VIP</a></div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<!-- THIS IS LOGIN AND TO REGISTER-->
+				<div class="login-to-regsiter">
+
+					<!-- LOGIN -->
+					<a onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"> Đăng nhập</i></a>
+					<div id="id01" class="modal">
+					  	<span onclick="document.getElementById('id01').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content animate" onsubmit=" return KTDN();" name="dangnhap">
+							<div class="imgcontainer">
+								<img src="E:\The study\HTML + CSS + JS + BOOTRAP\Project 2\Introduction/12.jpg" width="100%" class="avatar">
+							</div>
+							<div class="login">
+								<label><b>Account</b></label>
+								<input type="text" name="username" placeholder="Enter your user name"  required>
+								
+								<label><b>Password</b></label>
+								<input type="password" name="psw" placeholder="Enter your password" required>
+								<span id="loi-psw" style="color: red;font-size: 20px;"></span><br>
+
+								<button type="submit" class="submit">Login</button>
+								<input type="checkbox"> Remember me
+							</div>
+
+							<div class="login">
+								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+								<span class="psw">Forgot <a href="#"> password ?</a></span>
+							</div>
+						</form>
+					</div>
+
+					<label>/</label>
+
+					<!-- TO REGISTER-->
+					<a onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-key"> Đăng ký</i></a>
+					<div id="id02" class="modal2">
+					  	<span onclick="document.getElementById('id02').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content2 animate" onsubmit="return KTDK();" name="dangky">
+							<div class="to-regsiter">
+								<label><b>Account</b></label>
+							    <input type="text" placeholder="Enter account" name="acc"  id="acc" required>
+							    <span id="loi-acc" style="color: red;font-size: 20px;"></span><br>
+
+							    <label><b>Password</b></label>
+							    <input type="password" placeholder="Enter Password" name="psw" required>
+
+							    <label><b>Repeat Password</b></label>
+							    <input type="password" placeholder="Repeat Password" name="psw2" required>
+							    <span id="loi-psw2" style="color: red;font-size: 20px;"></span><br>
+
+							    <input type="checkbox" checked="checked"> Remember me
+
+							    <div class="clearfix">
+							      <button type="button" onclick="document.getElementById('id02').style.display='none'"  class="cancelbtn">Cancel</button>
+							      <button type="submit" class="signupbtn">Sign Up</button>
+							    </div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="body">
+				<!-- THIS IS SLIDESHOW -->
+				<div class="movement-part">
+					<img src="E:/The study/HTML + CSS + JS + BOOTRAP/Project 2/Introduction/01.jpg" name="image" id="image" alt="" style="width: 100%;" height="600px">
+					<a class="back" onclick="back();">&#10094;</a>
+					<a class="next" onclick="next();">&#10095;</a>
+				</div>
+
+				<!-- THE OTHER PART -->
+				<div class="other-part">
+					<div class="first">
+						
+					</div>
+
+					<div class="second">
+						<h1 class="h1">Website bán vé đêm nhạc Hardwell quá tải</h1>
+						<div class="news">
+							<h2 class="h2">Được coi là lễ hội EDM lớn nhất trong giai đoạn đầu năm đến nay, đêm diễn của Hardwell vào tối 20/5 tại Ecopark, Hà Nội được nhiều tín đồ âm nhạc mong chờ.</h2>
+
+							<p>Những tấm vé đầu tiên của khu GA (đứng tự do) đã được tung ra với mức giá 600.000 đồng. Từ ngày 23/3, trang mua vé chính thức của sự kiện liên tục bị quá tải vì số lượng người truy cập quá lớn. Dưới đây là 4 nguyên nhân khiến vé tham gia “Harwell by VinaPhone” được giới trẻ săn lùng nhiều nhất hiện nay.</p>
+							 <img src="6/1.jpg" width="500px" height="500px">
+							 <p>
+							“Nhìn lại quãng thời gian đã qua, tôi vấp ngã nhiều nhưng chính điều đó giúp tôi trưởng thành. Áp lực không vật ngã được tôi. Ngược lại, nó trở thành động lực lớn để tôi trở lại mạnh mẽ hơn. Âm nhạc giúp tôi tạo nên thương hiệu Phương Trinh Jolie. Điện ảnh và truyền hình lại giúp tôi đến gần với khán giả. <br><br>
+
+							Dù có chậm hơn so với các đồng nghiệp cùng thời, tôi tin vào duyên nghề và sự lựa chọn của mình. Để chuẩn bị cho chặng đường kế tiếp trong âm nhạc sau một thời gian đóng phim, tôi chọn tham gia cuộc thi Hãy nghe tôi hát. Khán giả sẽ thấy rằng sau tất cả những khó khăn tôi đã sẵn sàng chinh phục họ”, Phương Trinh Jolie tâm sự. <br><br>
+
+							Ở tuổi 26, chưa bao giờ quá muộn để Phương Trinh Jolie tìm được vị trí mà lẽ ra cô đã sở hữu từ lâu. Trong cuộc thi này, nữ ca sĩ kiêm diễn viên gây ấn tượng bởi sự sáng tạo không ngừng nghỉ qua từng đêm thi.</p>
+							<p>Sự kiện EDM lần đầu diễn ra vào tối thứ 7
+							Một trong những lý do lớn nhất khiến đêm nhạc “Hardwell by VinaPhone” gây sốt dù giá vé cao hơn những sự kiện EDM trước đó là bởi đây là lần đầu tiên, Vietnam Electronic Weekend (VEW) được tổ chức vào tối thứ 7 (20/5). Những đêm diễn của Armin van Buuren, Steve Aoki hay gần đây là Martin Garrix dù đông kín khán giả tại Ecopark nhưng đều diễn ra vào tối chủ nhật. <br><br>
+
+							Hardwell lần đầu biểu diễn liên tục 120 phút
+							Với sự đầu tư về mặt tổ chức, lượng khán giả đổ về “Hardwell by VinaPhone” dự kiến sẽ gấp đôi những đêm diễn trước. Theo tiết lộ của ban tổ chức, DJ Hardwell sẽ biểu diễn hơn 120 phút - kỷ lục về thời gian trong một đêm diễn của “phù thủy âm thanh”. Đây cũng là món quà đặc biệt mà DJ số một thế giới trong các năm 2013 và 2014 dành tặng khán giả Việt Nam.</p>
+							 <img src="6/2.jpg" width="500px" height="500px">
+							 <p>Mixset dành riêng cho khán giả Việt Nam
+                             Toàn bộ không gian của Ecopark sẽ được lấp đầy bởi những set nhạc mới nhất do chính DJ người Hà Lan sáng tác và sản xuất cho khán giả Việt Nam. Bên cạnh đó, những bản hit đình đám của anh cũng được trình diễn dưới sự đầu tư kỹ lưỡng và giám sát khắt khe của các kỹ thuật viên chuyên nghiệp nước ngoài. Ê-kíp hứa hẹn mang đến một không gian âm nhạc ấn tượng cho người hâm mộ. 
+							</p>
+							 <img src="6/3.jpg" width="500px">
+							 <p>Sân khấu chuẩn quốc tế
+							Theo đúng tiêu chuẩn cao nhất mà Hardwell đề ra, show diễn lần này được đầu tư và giám sát kĩ lưỡng bởi các chuyên gia đến từ Hà Lan. Tiêu chuẩn chất lượng đảm bảo theo sát các lễ hội âm nhạc quốc tế.
+
+							Nhằm đáp ứng nhu cầu theo dõi màn trình diễn cho khán giả trên toàn quốc, buổi diễn sẽ được phát trực tiếp trên kênh trực tuyến chính thức của VinaPhone. Đêm nhạc sử dụng 180 loa từ thương hiệu D&B nổi tiếng thế giới cùng số lượng lớn hiệu ứng và pháo.</p>
+						
+						</div>
+					</div>
+
+					<div class="third">
+						
+					</div>
+				</div>	
+			</div>
+
+			<div class="footer">
+				<div class="letter">
+					<ul>
+						<li><a href="#">Giới thiệu</a></li>
+						<li><a href="#">Copyright</a></li>
+						<li><a href="#">APIs</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Điều khoản</a></li>
+						<li><a href="#">Khuong MP3 VIP</a></li>
+						<li><a href="#">Liên hệ</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Quảng cáo</a></li>
+						<li><a href="#">Ứng dụng</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">FAQs</a></li>
+						<li><a href="#">Góp ý</a></li>
+					</ul>
+				</div>
+
+				<div class="icon">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-google-plus"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+
+			</div>
+			</div>
+		</div>
+	</body>
+</html>

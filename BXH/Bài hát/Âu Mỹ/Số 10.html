@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ISpy - Kyle, Lil Yachty</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="Chung.css">
+		<script type="text/javascript" src="Chung.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			
+			<div class="header">
+				<!-- THIS IS LOGO -->
+				<div class="icon1">
+					<a href="#">
+						<i class="fa fa-music" id="logo"></i>
+						<span>MjuDic Online</span>
+					</a>
+				</div>
+
+				<!-- THIS IS SEARCH BOX -->
+				<div class="search">
+					<input type="text" placeholder="Nhập nội dung cần tìm">
+				</div>
+
+				<div class="menu1">
+					<a href="#"><i class="fa fa-bars" id="id2" onclick="document.getElementById('id03').style.display=
+					'block'"> Menu</i></a>
+					<div id="id03" class="modal3">
+					  	<span onclick="document.getElementById('id03').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content3 animate">
+							<div class="small-menu">
+								<div><a href="E:\The study\HTML + CSS + JS + BOOTRAP\Project 2/Project 2.html">Trang chủ</a></div>
+								<div><a href="#">Nhạc cá nhân</a></div>
+								<div><a href="#">Album</a></div>
+								<div><a href="#">Video</a></div>
+								<div><a href="#">Nghệ sĩ</a></div>
+								<div><a href="#">BXH</a></div>
+							    <div><a href="#">Chủ đề</a></div>
+							    <div><a href="#">Top 100</a></div>
+							    <div><a href="#">Radio</a></div>
+							    <div><a href="#">VIP</a></div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<!-- THIS IS LOGIN AND TO REGISTER-->
+				<div class="login-to-regsiter">
+
+					<!-- LOGIN -->
+					<a onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"> Đăng nhập</i></a>
+					<div id="id01" class="modal">
+					  	<span onclick="document.getElementById('id01').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content animate" onsubmit=" return KTDN();" name="dangnhap">
+							<div class="imgcontainer">
+								<img src="E:\The study\HTML + CSS + JS + BOOTRAP\Project 2\Introduction/12.jpg" width="100%" class="avatar">
+							</div>
+							<div class="login">
+								<label><b>Account</b></label>
+								<input type="text" name="username" placeholder="Enter your user name"  required>
+								
+								<label><b>Password</b></label>
+								<input type="password" name="psw" placeholder="Enter your password" required>
+								<span id="loi-psw" style="color: red;font-size: 20px;"></span><br>
+
+								<button type="submit" class="submit">Login</button>
+								<input type="checkbox"> Remember me
+							</div>
+
+							<div class="login">
+								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+								<span class="psw">Forgot <a href="#"> password ?</a></span>
+							</div>
+						</form>
+					</div>
+
+					<label>/</label>
+
+					<!-- TO REGISTER-->
+					<a onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-key"> Đăng ký</i></a>
+					<div id="id02" class="modal2">
+					  	<span onclick="document.getElementById('id02').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content2 animate" onsubmit="return KTDK();" name="dangky">
+							<div class="to-regsiter">
+								<label><b>Account</b></label>
+							    <input type="text" placeholder="Enter account" name="acc"  id="acc" required>
+							    <span id="loi-acc" style="color: red;font-size: 20px;"></span><br>
+
+							    <label><b>Password</b></label>
+							    <input type="password" placeholder="Enter Password" name="psw" required>
+
+							    <label><b>Repeat Password</b></label>
+							    <input type="password" placeholder="Repeat Password" name="psw2" required>
+							    <span id="loi-psw2" style="color: red;font-size: 20px;"></span><br>
+
+							    <input type="checkbox" checked="checked"> Remember me
+
+							    <div class="clearfix">
+							      <button type="button" onclick="document.getElementById('id02').style.display='none'"  class="cancelbtn">Cancel</button>
+							      <button type="submit" class="signupbtn">Sign Up</button>
+							    </div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="body">
+				<!-- THIS IS SLIDESHOW -->
+				<div class="movement-part">
+					<img src="E:/The study/HTML + CSS + JS + BOOTRAP/Project 2/Introduction/01.jpg" name="image" id="image" alt="" style="width: 100%;" height="600px">
+					<a class="back" onclick="back();">&#10094;</a>
+					<a class="next" onclick="next();">&#10095;</a>
+				</div>
+
+				<!-- THE OTHER PART -->
+				<div class="other-part">
+					<div class="first">
+						
+					</div>
+
+					<div class="second">
+						<div class="open">
+							<div class="img">
+								<img src="10.jpg" width="200px" height="200px">
+							</div>
+							<div class="content">
+								<h1>ISpy</h1>
+								<h2>Kyle, Lil Yachty</h2><br>
+								<p>Phát hành: 2017</p>
+								<p>Thể loại:  Âu Mỹ, Pop</p>
+								<div class="share">
+									<i class="fa fa-facebook"></i>
+									<i class="fa fa-google-plus"></i>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="audio-video">
+							<audio controls="controls">
+								<source src="Nhạc/ISpy - Kyle, Lil Yachty _ Zing MP3.mp3" type="audio/mp3">
+							</audio>
+						</div>
+
+						<div class="buttons">
+						<button><i class="fa fa-plus"> Thông tin</i></button>
+						<button><i class="fa fa-flag"> Phản hồi</i></button>
+						<button><i class="fa fa-share-alt"> Chia sẻ</i></button>
+						<span class="i"><i class="fa fa-headphones"> 1,020,265</i></span>
+						</div>
+
+						<div class="lyrics">
+							<p><b>Lời bài hát</b><br><br>
+								Man, fuck <br>
+								What's wrong Kyle? <br>
+								Man, these kids, man, talkin' shit, makin' me feel bad <br>
+								Man, fuck them kids, bro! Look around, bro, look at life <br>
+								Man, you're right <br>
+								Mmm, you see? You see these fine bitches over here? <br>
+								Yeah, woah... <br>
+								You see these trees man? You see this water? <br>
+								I guess it is okay <br>
+								Come on, man, you got so much more to appreciate, man <br>
+								Man you know what, y-you're right... <br>
+								You damn right I'm right, I can't remember a time I was god-damn wrong <br>
+								Man, thanks, Lil' Boat <br>
+								Hey man, that's what I'm here for <br><br>
+
+								[Verse 1: Kyle] <br>
+								I ain't been gettin' high... <br>
+								Well maybe a little, baby I don't wanna lie <br>
+								I know when you text me girl, I don't always reply <br>
+								Well you're not an angel either, you can't even fly <br>
+								I notice, you think that you know shit <br>
+								All this shade that's comin' at me, I wonder who throws it <br>
+								They can't see the vision, boy they must be out of focus <br>
+								That's a real hot album homie, I wonder who wrote it, oh shit <br>
+								Otay, pray them niggas go away <br>
+								Always hella clowns around it look like Cirque Du Soleil <br>
+								This is not the album either, these are just the throwaways<br> 
+								This shit still so cold when it drop, it's gonna be a mothafuckin' snow day <br>
+								Ayy, boy is good and he knows it, he don't say it, he shows it <br>
+								I'm just like DeRozan, if I shoot it, it goes in <br>
+								I am in Cali just coastin', get 'em so wet they need coasters <br>
+								I got a selfie with Oprah, I just ain't never post it <br>
+								And I'm in my happy place posted, I ain't frown since '06 <br>
+								I ain't cried since '01, my pad like Six Flags and your house is no fun <br>
+								You can come back to mine though, your friend ain't cute but it's fine though <br>
+								We gon' end on a high note 
+							</p>
+						</div>
+					</div>
+
+					<div class="third">
+						
+					</div>
+				</div>	
+			</div>
+
+			<div class="footer">
+				<div class="letter">
+					<ul>
+						<li><a href="#">Giới thiệu</a></li>
+						<li><a href="#">Copyright</a></li>
+						<li><a href="#">APIs</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Điều khoản</a></li>
+						<li><a href="#">Khuong MP3 VIP</a></li>
+						<li><a href="#">Liên hệ</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Quảng cáo</a></li>
+						<li><a href="#">Ứng dụng</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">FAQs</a></li>
+						<li><a href="#">Góp ý</a></li>
+					</ul>
+				</div>
+
+				<div class="icon">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-google-plus"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+
+			</div>
+			</div>
+		</div>
+	</body>
+</html>

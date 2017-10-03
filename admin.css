@@ -1,0 +1,117 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.banner{
+	width: 100%;
+	height: 100px;
+	border: 1px solid black;
+	background-color: #dddddd;
+	text-align: center;
+	padding-top: 10px;
+}
+.user{
+	width: 12%;
+	height: 100px;
+	float: left;
+}
+.user a{
+	text-decoration: none;
+	color: black;
+}
+.title{
+	width: 87%;
+	height: 100px;
+	float: left;
+	padding-top: 10px;
+}
+h2{
+	color: red;
+}
+.title h3{
+	color: red;
+}
+.content{
+	width: 100%;
+	height: 500px;
+	margin-top: 10px;
+}
+.menu{
+	width: 12%;
+	height: 402px;
+	float: left;
+	border: 1px solid #ffffff;
+	line-height: 20px;
+	text-align: center;
+}
+.box{
+	width: auto;
+	height: 85px;
+	background-color: #f0f0f0;
+	font-size: 14px;
+}
+.box:hover{
+	border: 1px solid #999;
+}
+.menu a{
+	text-decoration: none;
+	color: #000;
+}
+.menu a:hover{
+	color: #f60;
+}
+#chucnang{
+	display: none;
+	width: 32%;
+	height: 400px;
+	float: left;
+	margin-left: 10px;
+	border: 1px solid #ffffff;
+	background-color: #f0f0f0;
+}
+#chucnang table{
+	width: 95%;
+	height: 200px;
+
+	line-height: 35px;
+}
+#chucnang input{
+	width: 200px;
+	height: 20px;
+}
+#chucnang input[type="button"]{
+	width: 120px;
+}
+#chucnang h3{
+	text-align: center;
+}
+i:hover{
+	cursor: pointer;
+}
+#thietbi{
+	display: none;
+	width: 53%;
+	height: 100%;
+	float: left;
+	margin-left: 2px;
+	border: 1px solid #ffffff;
+	background-color: #f0f0f0;
+}
+#thietbi a{
+	color: #000;
+}
+#thietbi table{
+	width: 95%;
+	margin-left: 15px;
+	border: 1px solid black;
+	margin-top: 20px;
+	text-align: center;
+}
+#thietbi td{
+	line-height: 30px;	
+	border: 1px solid black;
+}
+#thietbi table tr:first-child{
+	background: #aaa;
+}

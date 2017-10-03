@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Khắc Việt | Nghệ sĩ</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="Chung.css">
+		<style>
+			.second .bg-img{
+			    width: 100%;
+			    height: 243px;
+			    background-image: url('3.3.jpg');
+			    position: relative;
+			}
+		</style>
+		<script type="text/javascript" src="Chung.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			
+			<div class="header">
+				<!-- THIS IS LOGO -->
+				<div class="icon1">
+					<a href="#">
+						<i class="fa fa-music" id="logo"></i>
+						<span>MjuDic Online</span>
+					</a>
+				</div>
+
+				<!-- THIS IS SEARCH BOX -->
+				<div class="search">
+					<input type="text" placeholder="Nhập nội dung cần tìm">
+				</div>
+
+				<div class="menu1">
+					<a href="#"><i class="fa fa-bars" id="id2" onclick="document.getElementById('id03').style.display=
+					'block'"> Menu</i></a>
+					<div id="id03" class="modal3">
+					  	<span onclick="document.getElementById('id03').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content3 animate">
+							<div class="small-menu">
+								<div><a href="E:\The study\HTML + CSS + JS + BOOTRAP\Project 2/Project 2.html">Trang chủ</a></div>
+								<div><a href="#">Nhạc cá nhân</a></div>
+								<div><a href="#">Album</a></div>
+								<div><a href="#">Video</a></div>
+								<div><a href="#">Nghệ sĩ</a></div>
+								<div><a href="#">BXH</a></div>
+							    <div><a href="#">Chủ đề</a></div>
+							    <div><a href="#">Top 100</a></div>
+							    <div><a href="#">Radio</a></div>
+							    <div><a href="#">VIP</a></div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<!-- THIS IS LOGIN AND TO REGISTER-->
+				<div class="login-to-regsiter">
+
+					<!-- LOGIN -->
+					<a onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"> Đăng nhập</i></a>
+					<div id="id01" class="modal">
+					  	<span onclick="document.getElementById('id01').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content animate" onsubmit=" return KTDN();" name="dangnhap">
+							<div class="imgcontainer">
+								<img src="E:\The study\HTML + CSS + JS + BOOTRAP\Project 2\Introduction/12.jpg" width="100%" class="avatar">
+							</div>
+							<div class="login">
+								<label><b>Account</b></label>
+								<input type="text" name="username" placeholder="Enter your user name"  required>
+								
+								<label><b>Password</b></label>
+								<input type="password" name="psw" placeholder="Enter your password" required>
+								<span id="loi-psw" style="color: red;font-size: 20px;"></span><br>
+
+								<button type="submit" class="submit">Login</button>
+								<input type="checkbox"> Remember me
+							</div>
+
+							<div class="login">
+								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+								<span class="psw">Forgot <a href="#"> password ?</a></span>
+							</div>
+						</form>
+					</div>
+
+					<label>/</label>
+
+					<!-- TO REGISTER-->
+					<a onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-key"> Đăng ký</i></a>
+					<div id="id02" class="modal2">
+					  	<span onclick="document.getElementById('id02').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+						<form class="modal-content2 animate" onsubmit="return KTDK();" name="dangky">
+							<div class="to-regsiter">
+								<label><b>Account</b></label>
+							    <input type="text" placeholder="Enter account" name="acc"  id="acc" required>
+							    <span id="loi-acc" style="color: red;font-size: 20px;"></span><br>
+
+							    <label><b>Password</b></label>
+							    <input type="password" placeholder="Enter Password" name="psw" required>
+
+							    <label><b>Repeat Password</b></label>
+							    <input type="password" placeholder="Repeat Password" name="psw2" required>
+							    <span id="loi-psw2" style="color: red;font-size: 20px;"></span><br>
+
+							    <input type="checkbox" checked="checked"> Remember me
+
+							    <div class="clearfix">
+							      <button type="button" onclick="document.getElementById('id02').style.display='none'"  class="cancelbtn">Cancel</button>
+							      <button type="submit" class="signupbtn">Sign Up</button>
+							    </div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="body">
+				<!-- THIS IS SLIDESHOW -->
+				<div class="movement-part">
+					<img src="E:/The study/HTML + CSS + JS + BOOTRAP/Project 2/Introduction/01.jpg" name="image" id="image" alt="" style="width: 100%;" height="600px">
+					<a class="back" onclick="back();">&#10094;</a>
+					<a class="next" onclick="next();">&#10095;</a>
+				</div>
+
+				<!-- THE OTHER PART -->
+				<div class="other-part">
+					<div class="first">
+						
+					</div>
+
+					<div class="second">
+						<div class="bg-img">
+							<div class="img-artist"><img src="03.jpg" width="150px" height="150px"></div>
+							<div class="artist-infor">
+								<h1>KHẮC VIỆT</h1>
+								<p>- Nickname: Việt Vui Vẻ (do fanclub dành tặng); - Đã tốt nghiệp Học viện Âm nhạc Quốc gia Việt Nam, khoa Thanh nhạc vào năm 2005; - Năm 2009, phát hành album online “Câu chuyện tình yêu”; - Đầu năm 2010,...Tiểu sử Khắc Việt</p>
+							</div>
+						</div>
+						<div class="introduce-artist">
+							<div class="vertical1">
+								<h2>TIỂU SỬ KHẮC VIỆT</h2>
+								<div>
+									Tên thật: Nguyễn Khắc Việt
+									
+									Ngày sinh: 30/08/1987<br><br>
+
+									Thể loại: Việt Nam, Nhạc Trẻ Quốc Gia: Việt Nam - Nickname: Việt Vui Vẻ (do fanclub dành tặng); <br><br>
+
+
+
+									- Đã tốt nghiệp Học viện Âm nhạc Quốc gia Việt Nam, khoa Thanh nhạc vào năm 2005; <br><br>
+
+
+
+									- Năm 2009, phát hành album online “Câu chuyện tình yêu”; <br><br>
+
+
+
+									- Đầu năm 2010, phát hành single và video clip “Như vậy nhé”; <br><br>
+
+
+
+									- Tính đến thời điểm hiện nay đã sáng tác hơn 100 ca khúc, trong đó có một số ca khúc được đông đảo khán giả trẻ yêu thích. <br><br>
+
+
+
+									- Sinh ra và lớn lên ở Yên Bái, trong một gia đình không có ai theo nghệ thuật, bố mẹ là công chức; sau khi học xong phổ thông, Khắc Việt cùng em ruột của mình thi đỗ Nhạc viện Hà Nội (Học viện Âm nhạc Quốc gia bây giờ) vào năm 2005. <br><br>
+
+
+
+									- Tốt nghiệp khoa Thanh nhạc, nhưng Khắc Việt lại bén duyên với con đường sáng tác khi cho ra mắt ca khúc đầu tay với tựa đề “Quên” vào năm 2009. Sau khi phát hành một thời gian ngắn, ca khúc “Quên” do chính Khắc Việt thể hiện đã trở thành một hit trên mạng vào thời gian đó và liên tục đứng vị trí cao tại các bảng xếp hạng âm nhạc online. Với thành công đó, Khắc Việt đã tiếp tục cho ra đời album online "Câu chuyện tình yêu" để chuẩn bị cho con đường ca hát chuyên nghiệp của mình. Đầu năm 2010, single “Như vậy nhé” được phát hành online và nhận được rất nhiều sự ủng hộ của khán giả, đặc biệt là cộng đồng mạng. Với chất giọng nam cao, sáng, đầy nội lực nhưng không kém phần tinh tế, Khắc Việt gây ấn tượng với khán giả bằng các ca khúc trữ tình, đậm chất pop-ballad trong thời gian qua. Có thể nói đây là một sở trường mà Khắc Việt đã biết khai thác đúng hướng. Không có thế mạnh về ngoại hình như nhiều ca sĩ hiện nay nhưng Khắc Việt tự tin với âm nhạc mang dấu ấn riêng của mình sẽ khiến cho khán giả “bắt tai”. Với âm nhạc, Khắc Việt đặt ra tiêu chí chú trọng phần nghe hơn là phần nhìn.<br><br> 
+
+
+
+									- Bên cạnh ca hát thì sáng tác là niềm đam mê của Khắc Việt ngay từ khi bước chân vào con đường ca hát. Sở hữu hơn 100 ca khúc tính đến thời điểm bây giờ, cái tên Khắc Việt đang được nhiều ca sĩ thị trường tìm đến cộng tác cùng trong các dự án âm nhạc của họ. Hiện tại, Khắc Việt đang là sáng tác chính cho một số ca sĩ như Nam Cường, Cao Thái Sơn, Nhật Tinh Anh, Quỳnh Nga, nhóm The Men… Những sáng tác của Khắc Việt như: Yêu thương quay về, Bình yên nhé (Cao Thái Sơn); Phải là anh, Đoạn cuối con đường (Nam Cường); Chờ em trong đêm (The Men); Suy nghĩ trong anh (Duy Khoa)… là những bài hát đang nằm trong top hot các ca khúc được nghe nhiều nhất trên một số kênh âm nhạc hiện nay.
+								</div>
+							</div>
+
+							<div class="vertical2">
+								<h2>NGHỆ SĨ TƯƠNG TỰ</h2>
+								<div class="list-artist">
+									<div>
+										<div class="img-artist-small"><img src="nstt1.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>Hiền Thục</p>
+											<p>4,525 quan tâm</p>
+										</div>
+									</div>
+									<div>
+										<div class="img-artist-small"><img src="nstt2.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>Trịnh Thăng Bình</p>
+											<p>14,525 quan tâm</p>
+										</div>
+									</div>
+									<div>
+										<div class="img-artist-small"><img src="nstt3.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>Hồ Quỳnh Hương</p>
+											<p>20,256 quan tâm</p>
+										</div>
+									</div>
+									<div>
+										<div class="img-artist-small"><img src="nstt4.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>V.Music</p>
+											<p>10,203 quan tâm</p>
+										</div>
+									</div>
+									<div>
+										<div class="img-artist-small"><img src="nstt5.jpg" width="50px" height="50px"></div>
+										<div class="care">
+											<p>Maroon 5</p>
+											<p>21,203 quan tâm</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="third">
+						
+					</div>
+				</div>	
+			</div>
+
+			<div class="footer">
+				<div class="letter">
+					<ul>
+						<li><a href="#">Giới thiệu</a></li>
+						<li><a href="#">Copyright</a></li>
+						<li><a href="#">APIs</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Điều khoản</a></li>
+						<li><a href="#">Khuong MP3 VIP</a></li>
+						<li><a href="#">Liên hệ</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Quảng cáo</a></li>
+						<li><a href="#">Ứng dụng</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">FAQs</a></li>
+						<li><a href="#">Góp ý</a></li>
+					</ul>
+				</div>
+
+				<div class="icon">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-google-plus"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+
+			</div>
+			</div>
+		</div>
+	</body>
+</html>

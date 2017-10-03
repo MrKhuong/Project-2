@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MjuDic Online Mp3 | Nghe tải nhạc chất lượng cao trên desktop, moblie và TV</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Nguyen Cong Khuong">
+		<meta name="discription" content="Nghe nhạc online, tải nhạc miễn phí.">
+		<meta name="keyword" content="mp3, nghe nhạc, online, tải nhạc">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="Project 2.css">
+		<script type="text/javascript" src="Project 2.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			
+			<!-- THIS IS THE HEADER -->
+			<div class="header">
+
+				<!-- THIS IS LOGO -->
+				<div class="icon1">
+					<a href="Project 2.html">
+						<i class="fa fa-music" id="logo"></i>
+						<span>MjuDic Online</span>
+					</a>
+				</div>
+
+				<!-- THIS IS SEARCH BOX -->
+				<div class="search">
+					<input type="text" placeholder="Nhập nội dung cần tìm">
+				</div>
+
+				<!-- THIS IS MENU -->
+				<div class="menu1">
+					<a href="#"><i class="fa fa-bars" id="id2" onclick="document.getElementById('id03').style.display=
+					'block'"> Menu</i></a>
+					<div id="id03" class="modal3">
+						<!-- TẠO DẤU X  -->
+					  	<span onclick="document.getElementById('id03').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+
+						<!-- TẠO FROM -->
+						<form class="modal-content3 animate">
+							<!-- TẠO NỘI DUNG -->
+							<div class="small-menu">
+								<div><a href="Project 2.html">Trang chủ</a></div>
+								<div>
+									<a href="#" onclick="Open();">Nhạc cá nhân</a>
+									<div id="message">
+										<div>Bạn phải đăng nhập tài khoản trước</div>
+										<button class="ok" onclick="Exit();">OK</button>
+									</div>
+								</div>
+								<div><a href="#">Album</a></div>
+								<div><a href="#">Video</a></div>
+								<div><a href="#">Nghệ sĩ</a></div>
+								<div><a href="#">BXH</a></div>
+							    <div><a href="#">Chủ đề</a></div>
+							    <div><a href="#">Top 100</a></div>
+							    <div><a href="#">Radio</a></div>
+							    <div><a href="#">VIP</a></div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<!-- ĐÂY LÀ PHẦN PLAYLIST -->
+				<div class="playlist">
+					<!-- TẠO THÔNG BÁO KHI LỖI -->
+					<div id="message">
+						<div>Bài hát/Video này đã có trong playlist của bạn. Hãy chọn bài hát/video khác</div>
+						<button class="ok" onclick="Exit();">OK</button>
+					</div>
+					<!-- TẠO RA PLAYLIST -->
+					<div class="modalPlaylist" id="myModalPlaylist">
+							<span onclick="Close();" class="close" title="Close Modal">Back</span>
+							<h1>WELCOME TO YOUR PLAYLIST</h1><br>
+							<div class="playlist-content">
+								<div><h3>Hình ảnh</h3></div>
+								<div><h3>Tên bài hát / Video</h3></div>
+								<div><h3>Ca sĩ</h3></div>
+								<div><h3>Định dạng</h3></div>
+								<div><h3>Xóa</h3></div>
+							</div>
+							<div id="ThePlaylist" class="myPlaylist">
+								<div id="playlistItemImages"></div>
+								<div id="playlistItemContent"></div>
+								<div id="playlistItemSinger"></div>
+								<div id="playlistItemType"></div>
+								<div id="playlistItemRemove"></div>
+							</div>
+					</div>
+				</div>
+				
+
+				<!-- THIS IS LOGIN AND TO REGISTER-->
+				<div class="login-to-regsiter">
+
+					<!-- LOGIN -->
+					<a onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-user"> Đăng nhập</i></a>
+					<div id="id01" class="modal">
+						<!-- TẠO DẤU X -->
+					  	<span onclick="document.getElementById('id01').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+
+						<!-- TẠO FROM ĐĂNG NHẬP -->
+						<form class="modal-content animate" onsubmit=" return KTDN();" name="dangnhap">
+							<div class="imgcontainer">
+								<img src="Introduction/12.jpg" width="100%" class="avatar">
+							</div>
+							<!-- TẠO NỘI DUNG CHO FORM -->
+							<div class="login">
+								<label><b>Account</b></label>
+								<input type="text" name="username" placeholder="Enter your user name"  required>
+								
+								<label><b>Password</b></label>
+								<input type="password" name="psw" placeholder="Enter your password" required>
+								<span id="loi-psw" style="color: red;font-size: 20px;"></span><br>
+
+								<button type="submit" class="submit">Login</button>
+								<input type="checkbox"> Remember me
+							</div>
+
+							<div class="login">
+								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+								<span class="psw">Forgot <a href="#"> password ?</a></span>
+							</div>
+						</form>
+					</div>
+
+					<label>/</label>
+
+					<!-- TO REGISTER -->
+					<a onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-key"> Đăng ký</i></a>
+					<div id="id02" class="modal2">
+						<!-- TẠO DẤU X -->
+					  	<span onclick="document.getElementById('id02').style.display='none'" 
+							class="close" title="Close Modal">&times;</span>
+
+						<!-- TẠO FROM ĐĂNG KÝ -->
+						<form class="modal-content2 animate" onsubmit="return KTDK();" name="dangky">
+							<!-- TẠO NỘI DỦNG CHO FORM -->
+							<div class="to-regsiter">
+								<label><b>Account</b></label>
+							    <input type="text" placeholder="Enter account" name="acc"  id="acc" required>
+							    
+							    <!-- THÔNG BÁO LỖI -->
+							    <span id="loi-acc" style="color: red;font-size: 20px;"></span><br>
+
+							    <label><b>Password</b></label>
+							    <input type="password" placeholder="Enter Password" name="psw" required>
+
+							    <label><b>Repeat Password</b></label>
+							    <input type="password" placeholder="Repeat Password" name="psw2" required>
+
+							    <!-- THÔNG BÁO LỖI -->
+							    <span id="loi-psw2" style="color: red;font-size: 20px;"></span><br>
+
+							    <div class="clearfix">
+							      <button type="button" onclick="document.getElementById('id02').style.display='none'"  class="cancelbtn">Cancel</button>
+							      <button type="submit" class="signupbtn" onclick="Open();">Sign Up</button>
+							    </div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- THIS IS THE BODY -->
+			<div class="body">
+
+				<!-- THIS IS SLIDESHOW -->
+				<div class="movement-part">
+					<img src="Introduction/01.jpg" name="image" id="image" alt="" style="width: 100%;" height="600px">
+					<a class="back" onclick="back();">&#10094;</a>
+					<a class="next" onclick="next();">&#10095;</a>
+				</div>
+				
+				<!-- THIS IS BODY-GROUP -->
+				<div class="body-group">
+
+					<!-- TẠO CÁC TAB LỚN: TRANG CHỦ, BÀI HÁT, VIDEO, BXH -->
+					<section class="tabs">
+					<input id="tab-1" type="radio" name="radio-set" class="tab-selector-1" checked="checked" />
+					<label for="tab-1" class="tab-label-1">TRANG CHỦ</label>
+					      
+					<input id="tab-2" type="radio" name="radio-set" class="tab-selector-2" />
+					<label for="tab-2" class="tab-label-2">BÀI HÁT</label>
+					      
+					<input id="tab-3" type="radio" name="radio-set" class="tab-selector-3" />
+					<label for="tab-3" class="tab-label-3">VIDEO</label>
+
+					<input id="tab-4" type="radio" name="radio-set" class="tab-selector-4" />
+					<label for="tab-4" class="tab-label-4">BXH</label>
+					
+					<div class="clear-shadow"></div>
+					        
+					<!-- TẠO NỘI DUNG CHO TỪNG TAB LỚN -->
+					<div class="content">
+
+						<!-- HOME -->
+					    <div class="content-1">
+
+					    	<!-- SONGS ARE THE MOST HEARD  -->
+					    	<h2>NGHE NHIỀU NHẤT</h2>
+
+					    	<!-- CHÈN HÌNH ẢNH, TÊN CA SĨ, TÊN BÀI HÁT CHO TỪNG BÀI HÁT -->
+					        <div class="most-heard-song">
+					         	<div class="first">
+					         		<div class="image" id="s01" data-content="Anh đã quen với cô đơn(Single)" data-singer="Soobin Hoàng Sơn" data-type="mp3">
+					         			<img src="Nghe nhiều nhất/01.jpg" width="180px" height="180px" title="Anh đã quen với cô đơn(Single)- Soobin Hoàng Sơn">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Nghe nhiều nhất/Số 1.html"><b>Anh đã quen...</b></a></h3>
+					         			<a href="#">Soobin Hoàng Sơn</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s01');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s02" data-content="Từ bỏ(Single)" data-singer="Khắc Việt" data-type="mp3">
+					         			<img src="Nghe nhiều nhất/02.jpg" width="180px" height="180px" title="Từ bỏ(Single)- Khắc Việt">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Nghe nhiều nhất/Số 2.html"><b>Từ bỏ(Single)</b></a></h3>
+					         			<a href="#">Khắc Việt</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s02');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image"  id="s03" data-content="Điều buồn nhất(Single)" data-singer="Kai Đinh" data-type="mp3">
+					         			<img src="Nghe nhiều nhất/03.jpg" width="180px" height="180px" title="Điều buồn nhất(Single)- Kai Đinh">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Nghe nhiều nhất/Số 3.html"><b>Điều buồn nhất</b></a></h3>
+					         			<a href="#">Kai Đinh</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s03');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s04" data-content="So good" data-singer="Zara Larsson" data-type="mp3">
+					         			<img src="Nghe nhiều nhất/04.jpg" width="180px" height="180px" title="So good - Zara Larsson">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Nghe nhiều nhất/Số 4.html"><b>So Good</b></a></h3>
+					         			<a href="#">Zara Larsson</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s04');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s05" data-content="Can you feel it? (Mini album)" data-singer="Highlight" data-type="mp3">
+					         			<img src="Nghe nhiều nhất/05.jpg" width="180px" height="180px" title="Can you feel it? (Mini album) - Highlight">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Nghe nhiều nhất/Số 5.html"><b>Can you feel...</b></a></h3>
+					         			<a href="#">Highlight</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s05');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s06" data-content="Trigger the fever" data-singer="NCT Dream" data-type="mp3">
+					         			<img src="Nghe nhiều nhất/06.jpg" width="180px" height="180px" title="Trigger the fever - NCT Dream">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Nghe nhiều nhất/Số 6.html"><b>Trigger the ...</b></a></h3>
+					         			<a href="#">NCT Dream</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s06');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s07" data-content="Mưa phi trường" data-singer="Phạm Chí Huy" data-type="mp3">
+					         			<img src="Nghe nhiều nhất/07.jpg" width="180px" height="180px" title="Mưa phi trường - Phạm Chí Huy">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Nghe nhiều nhất/Số 7.html"><b>Mưa phi trư...</b></a></h3>
+					         			<a href="#">Phạm Chí Huy</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s07');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s08" data-content="DOWNPOUR" data-singer="I.O.I" data-type="mp3">
+					         			<img src="Nghe nhiều nhất/08.jpg" width="180px" height="180px" title="DOWNPOUR- I.O.I">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Nghe nhiều nhất/Số 8.html"><b>DOWNPOUR</b></a></h3>
+					         			<a href="#">I.O.I</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s08');">Thích</button>
+					         	</div>
+					        </div>
+
+					        <!-- VIDEO ARE THE MOST HEARD  -->
+					        <h2>XEM NHIỀU NHẤT</h2>
+
+					        <!-- CHÈN HÌNH ẢNH, TÊN VIDEO, TÊN CA SĨ CHO TỪNG VIDEO -->
+					        <div class="most-watched-video">
+					         	<div class="first">
+					         		<div class="image" id="v01" data-content="Tìm một nửa cô đơn" data-singer="Hòa Minzy" data-type="mp4">
+					         			<img src="Xem nhiều nhất/01.jpg" width="180px" height="180px" title="Tìm một nửa cô đơn - Hòa Minzy">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Xem nhiều nhất/Số 1.html"><b>Tìm một nửa...</b></a></h3>
+					         			<a href="#">Hòa Minzy</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v01');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v02" data-content="Ta còn thuộc về nhau" data-singer="Hương Tràm" data-type="mp4">
+					         			<img src="Xem nhiều nhất/02.jpg" width="180px" height="180px" title="Ta còn thuộc về nhau - Hương Tràm">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Xem nhiều nhất/Số 2.html"><b>Ta còn thuộc...</b></a></h3>
+					         			<a href="#">Hương Tràm</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v02');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v03" data-content="Thiên Tử" data-singer="Đan Trường" data-type="mp4">
+					         			<img src="Xem nhiều nhất/03.jpg" width="180px" height="180px" title="Thiên Tử - Đan Trường">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Xem nhiều nhất/Số 3.html"><b>Thiên Tử</b></a></h3>
+					         			<a href="#">Đan Trường</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v03');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v04" data-content="Anh đã quen với cô đơn" data-singer="Soobin Hoàng Sơn" data-type="mp4">
+					         			<img src="Xem nhiều nhất/04.jpg" width="180px" height="180px" title="Anh đã quen với cô đơn - Soobin Hoàng Sơn">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Xem nhiều nhất/Số 4.html"><b>Anh đã quen...</b></a></h3>
+					         			<a href="#">Soobin Hoàng Sơn</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v04');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v05" data-content="Lạc trôi" data-singer="Sơn Tùng M-TP" data-type="mp4">
+					         			<img src="Xem nhiều nhất/05.jpg" width="180px" height="180px" title="Lạc trôi - Sơn Tùng M-TP">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Xem nhiều nhất/Số 5.html"><b>Lạc trôi</b></a></h3>
+					         			<a href="#">Sơn Tùng M-TP</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v05');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v06" data-content="Love & live" data-singer="Loona 1/3" data-type="mp4">
+					         			<img src="Xem nhiều nhất/06.jpg" width="180px" height="180px" title="Love & live - Loona 1/3">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Xem nhiều nhất/Số 6.html"><b>Love & live</b></a></h3>
+					         			<a href="#">Loona 1/3</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v06');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v07" data-content="Nevre ever" data-singer="GOT7" data-type="mp4">
+					         			<img src="Xem nhiều nhất/07.jpg" width="180px" height="180px" title="Nevre ever - GOT7">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Xem nhiều nhất/Số 7.html"><b>Never ever</b></a></h3>
+					         			<a href="#">GOT7</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v07');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v08" data-content="Scared to be lonely" data-singer="Martin Garrix" data-type="mp4">
+					         			<img src="Xem nhiều nhất/08.jpg" width="180px" height="180px" title="Scared to be lonely - Martin Garrix">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Xem nhiều nhất/Số 8.html"><b>Scared to be...</b></a></h3>
+					         			<a href="#">Martin Garrix</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v08');">Thích</button>
+					         	</div>
+					        </div>
+
+					        <!-- HOT ARTISTS  -->
+					        <h2>NGHỆ SĨ HOT</h2>
+
+					        <!-- CHÈN HÌNH ẢNH, TÊN CA SĨ -->
+					        <div class="hot-artist">
+								<ul>
+									<li><a href="Nghệ sĩ hot/Số 1.html">
+										<img src="Nghệ sĩ hot/01.jpg" width="180px" height="236	px">
+										<h2>Big Bang</h2>
+									</a></li>
+									<li><a href="Nghệ sĩ hot/Số 2.html">
+										<img src="Nghệ sĩ hot/02.jpg" width="100px" height="112px">
+										<h2>Soobin Hoàng Sơn</h2>
+									</a></li>
+									<li><a href="Nghệ sĩ hot/Số 3.html">
+										<img src="Nghệ sĩ hot/03.jpg" width="100px" height="112px">
+										<h2>Khắc Việt</h2>
+									</a></li>
+									<li><a href="Nghệ sĩ hot/Số 4.html">
+										<img src="Nghệ sĩ hot/04.jpg" width="100px" height="112px">
+										<h2>Đan Trường</h2>
+									</a></li>
+									<li><a href="Nghệ sĩ hot/Số 5.html">
+										<img src="Nghệ sĩ hot/05.jpg" width="100px" height="112px">
+										<h2>Hòa Minzy</h2>
+									</a></li>
+									<li><a href="Nghệ sĩ hot/Số 6.html">
+										<img src="Nghệ sĩ hot/06.jpg" width="100px" height="112px">
+										<h2>Kai Đinh</h2>
+									</a></li>
+									<li><a href="Nghệ sĩ hot/Số 7.html">
+										<img src="Nghệ sĩ hot/07.jpg" width="100px" height="112px">
+										<h2>Hương Tràm</h2>
+									</a></li>
+									<li><a href="Nghệ sĩ hot/Số 8.html">
+										<img src="Nghệ sĩ hot/08.jpg" width="100px" height="112px">
+										<h2>I.O.I</h2>
+									</a></li>
+									<li><a href="Nghệ sĩ hot/Số 9.html">
+										<img src="Nghệ sĩ hot/09.jpg" width="100px" height="112px">
+										<h2>Sara Larsson</h2>
+									</a></li>
+									<li><a href="#">
+										<img src="Nghệ sĩ hot/010.jpg" width="100px" height="112px">
+										<h2>Highlight</h2>
+									</a></li>
+									<li><a href="Nghệ sĩ hot/Số 11.html">
+										<img src="Nghệ sĩ hot/011.jpg" width="100px" height="112px">
+										<h2>Hatsune Miku</h2>
+									</a></li>
+									<li><a href="#">
+										<img src="Nghệ sĩ hot/012.jpg" width="100px" height="112px">
+										<h2>Sơn Tùng M-TP</h2>
+									</a></li>
+									<li><a href="#">
+										<img src="Nghệ sĩ hot/013.jpg" width="100px" height="112px">
+										<h2>Loona 1/3</h2>
+									</a></li>
+								</ul>
+							</div>
+
+					        <!-- NEWS MUSIC -->
+					        <h2>TIN ÂM NHẠC</h2>
+
+					        <!-- CHÈN TIN TỨC ÂM NHẠC -->
+					        <div class="news-music">
+					        	<ul>
+					        		<li>
+					        			<p><a href="Tin tức/Số 1.html">Phạm Hương khóc trong buổi ra mắt sản phẩm</a></p>
+					        		</li>
+					        		<li>
+					        			<p><a href="Tin tức/Số 2.html">Những cảnh quay 'nói thay nỗi lòng' bạn trẻ trong 'La La ngày mới'</a></p>
+					        		</li>
+					        		<li>
+					        			<p><a href="Tin tức/Số 3.html">The Voice Anh náo loạn vì huấn luyện viên văng tục</a></p>
+					        		</li>
+					        	</ul>
+
+					        	<ul>
+					        		<li>
+					        			<p><a href="Tin tức/Số 4.html">Tóc Tiên mời Siu Black thị phạm cho học trò The Voice</a></p>
+					        		</li>
+					        		<li>
+					        			<p><a href="Tin tức/Số 5.html">Ca sĩ Phương Tring Julie có sức hấp dẫn cả đàn ông và phụ nữ</a></p>
+					        		</li>
+					        		<li>
+					        			<p><a href="Tin tức/Số 6.html">Website bán vé đêm nhạc Hardwell quá tải</a></p>				        	
+					        		</li>
+					        	</ul>
+					        </div>
+
+					    </div>
+
+					    <!-- SONG -->
+					    <div class="content-2">
+					         
+					        <!-- THE SONG OF VIET NAM  -->
+					    	<h2>VIỆT NAM</h2>
+
+					    	<!-- CHÈN HÌNH ẢNH, TÊN CA SĨ, TÊN BÀI BÁT CHO MỤC BÀI HÁT VN -->
+					    	<div class="song-vietnam">
+					    		<div class="first">
+					         		<div class="image" id="s03" data-content="Điều buồn nhất" data-singer="Kai Đinh" data-type="mp3">
+					         			<img src="Bài hát/Việt Nam/01.jpg" width="180px" title="Điều buồn nhất- Kai Đinh">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Việt Nam/Số 1.html"><b>Điều buồn nhất</b></a></h3>
+					         			<a href="#">Kai Đinh</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s03');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s02" data-content="Từ bỏ" data-singer="Khắc Việt" data-type="mp3">
+					         			<img src="Bài hát/Việt Nam/02.jpg" width="180px" title="Từ bỏ - Khắc Việt">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Việt Nam/Số 2.html"><b>Từ bỏ</b></a></h3>
+					         			<a href="#">Khắc Việt</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s02');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s07" data-content="Mưa phi trường" data-singer="Phạm Chí Huy" data-type="mp3">
+					         			<img src="Bài hát/Việt Nam/03.jpg" width="180px" title="Mưa phi trường - Phạm Chí Huy">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Việt Nam/Số 3.html"><b>Mưa phi trườ...</b></a></h3>
+					         			<a href="#">Phạm Chí Huy</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s07');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s09" data-content="Phố thị" data-singer="Thu Thủy" data-type="mp3">
+					         			<img src="Bài hát/Việt Nam/04.jpg" width="180px" title="Phố thị- Thu thủy">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Việt Nam/Số 4.html"><b>Phố thị</b></a></h3>
+					         			<a href="#">Thu Thủy</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s09');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s10" data-content="Nơi này có anh" data-singer="Sơn Tùng MTP" data-type="mp3">
+					         			<img src="Bài hát/Việt Nam/05.jpg" width="180px" title="Nơi này có anh- Sơn Tùng M-TP">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Việt Nam/Số 5.html"><b>Nơi này có anh</b></a></h3>
+					         			<a href="#">Sơn Tùng MTP</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s10');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s11" data-content="Give it to me" data-singer="Thiều Bảo Trang" data-type="mp3">
+					         			<img src="Bài hát/Việt Nam/06.jpg" width="180px" title="Give it to me- Thiều Bảo Trang">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Việt Nam/Số 6.html"><b>Give it to me</b></a></h3>
+					         			<a href="#">Thiều Bảo Trang</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s11');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s12" data-content="Não cá vàng" data-singer="Only C, Lou Hoàng" data-type="mp3">
+					         			<img src="Bài hát/Việt Nam/07.jpg" width="180px" title="Não cá vàng- Only C, Lou Hoàng">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Việt Nam/Số 7.html"><b>Não cá vàng</b></a></h3>
+					         			<a href="#">Only C, Lou Hoàng</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s12');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s13" data-content="Ta còn thuộc về nhau" data-singer="Hương Tràm" data-type="mp3">
+					         			<img src="Bài hát/Việt Nam/08.jpg" width="180px" title="Ta còn thuộc về nhau - Hương Tràm">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Việt Nam/Số 8.html"><b>Ta còn thuộc ...</b></a></h3>
+					         			<a href="#">Hương Tràm</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s13');">Thích</button>
+					         	</div>
+					    	</div>
+
+					    	<!-- THE SONG OF USUK -->
+					    	<h2>ÂU MỸ</h2>
+
+					    	<!-- CHÈN HÌNH ẢNH, TÊN CA SĨ, TÊN BÀI BÁT CHO MỤC BÀI HÁT USUK -->
+					    	<div class="usuk">
+					    		<div class="first">
+					         		<div class="image" id="s14" data-content="Strong Ones" data-singer="Armin van Buuren" data-type="mp3">
+					         			<img src="Bài hát/Âu Mỹ/01.jpg" width="180px" height="180px" title=" Strong Ones (Orjan Nilsen Remix) - Armin van Buuren">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Âu Mỹ/Số 1.html"><b>Strong Ones</b></a></h3>
+					         			<a href="#">Armin van Buuren</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s14');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s15" data-content="Scare to be lonely" data-singer="Martin Garrix" data-type="mp3">
+					         			<img src="Bài hát/Âu Mỹ/02.jpg" width="180px" height="180px" title="Scare to be lonely - Martin Garrix">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Âu Mỹ/Số 2.html"><b>Scare to be...</b></a></h3>
+					         			<a href="#">Martin Garrix</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s15');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s16" data-content="Strait Out Of The Box: Part 2" data-singer="George Strait" data-type="mp3">
+					         			<img src="Bài hát/Âu Mỹ/03.jpg" width="180px" height="180px" title="Strait Out Of The Box: Part 2 - George Strait">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Âu Mỹ/Số 3.html"><b>Strait Out Of...</b></a></h3>
+					         			<a href="#">George Strait</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s16');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s17" data-content="How Would You Feel (Paean)" data-singer="Ed Sheerant" data-type="mp3">
+					         			<img src="Bài hát/Âu Mỹ/04.jpg" width="180px" height="180px" title="How Would You Feel (Paean) - Ed Sheeran">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Âu Mỹ/Số 4.html"><b>How Would ...</b></a></h3>
+					         			<a href="#">Ed Sheeran</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s17');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s18" data-content="Cold (Single)" data-singer="Maroon 5, Future" data-type="mp3">
+					         			<img src="Bài hát/Âu Mỹ/05.jpg" width="180px" height="180px" title="Cold (Single)- Maroon 5, Future">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Âu Mỹ/Số 5.html"><b>Cold (Single)</b></a></h3>
+					         			<a href="#">Maroon 5, Future</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s18');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s19" data-content="Witchcraft" data-singer="Frank Sinatra" data-type="mp3">
+					         			<img src="Bài hát/Âu Mỹ/06.jpg" width="180px" height="180px" title="Witchcraft (2000 Remaster) - Frank Sinatra">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Âu Mỹ/Số 6.html"><b>Witchcraft </b></a></h3>
+					         			<a href="#">Frank Sinatra</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s19');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s20" data-content="The Greatest Hits And A Little Bit More" data-singer="911" data-type="mp3">
+					         			<img src="Bài hát/Âu Mỹ/07.jpg" width="180px" height="180px" title="The Greatest Hits And A Little Bit More - 911">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Âu Mỹ/Số 7.html"><b>The Greatest...</b></a></h3>
+					         			<a href="#">911</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s20');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s21" data-content="Everyday" data-singer="Ariana Grande, Future" data-type="mp3">
+					         			<img src="Bài hát/Âu Mỹ/08.jpg" width="180px" height="180px" title="Everyday (Single)- Ariana Grande, Future">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Âu Mỹ/Số 8.html"><b>Everyday</b></a></h3>
+					         			<a href="#">Ariana Grande, Future</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s21');">Thích</button>
+					         	</div>
+					    	</div>
+
+					    	<!-- THE SONG OF ASIAN -->
+					    	<h2>CHÂU Á</h2>
+
+					    	<!-- CHÈN HÌNH ẢNH, TÊN CA SĨ, TÊN BÀI BÁT CHO MỤC BÀI HÁT CÁ -->
+					    	<div class="asian">
+					    		<div class="first">
+					         		<div class="image" id="s08" data-content="DOWNPOUR" data-singer="I.O.I" data-type="mp3">
+					         			<img src="Bài hát/Châu Á/01.jpg" width="180px" height="180px" title="DOWNPOUR- I.O.I">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Châu Á/Số 1.html"><b>DOWNPOUR</b></a></h3>
+					         			<a href="#">I.O.I</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s08');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s22" data-content="Loser" data-singer="BIG BANG" data-type="mp3">
+					         			<img src="Bài hát/Châu Á/02.jpg" width="180px" height="180px" title="Loser - BIG BANG">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Châu Á/Số 2.html"><b>Loser</b></a></h3>
+					         			<a href="#">BIG BANG</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s22');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s23" data-content="LE Noir" data-singer="B.A.P" data-type="mp3">
+					         			<img src="Bài hát/Châu Á/03.jpg" width="180px" height="180px" title="LE Noir- B.A.P">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Châu Á/Số 3.html"><b>LE Noir</b></a></h3>
+					         			<a href="#">B.A.P</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s23');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s24" data-content="New Men" data-singer="BTOB" data-type="mp3">
+					         			<img src="Bài hát/Châu Á/04.jpg" width="180px" height="180px" title="New Men- BTOB">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Châu Á/Số 4.html"><b>New Men</b></a></h3>
+					         			<a href="#">BTOB</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s24');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s25" data-content="World Is Mine" data-singer="Hatsune Miku" data-type="mp3">
+					         			<img src="Bài hát/Châu Á/05.jpg" width="180px" height="180px" title="ワールドイズマイン (World Is Mine) - Hatsune Miku">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Châu Á/Số 5.html"><b>World Is Mine</b></a></h3>
+					         			<a href="#">Hatsune Miku</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s25');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s26" data-content="Hey Mama!" data-singer="EXO-CBX" data-type="mp3">
+					         			<img src="Bài hát/Châu Á/06.jpg" width="180px" height="180px" title="Hey Mama!- EXO-CBX">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Châu Á/Số 6.html"><b>Hey Mama!</b></a></h3>
+					         			<a href="#">EXO-CBX</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s26');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s27" data-content="Kratos" data-singer="VIXX" data-type="mp3">
+					         			<img src="Bài hát/Châu Á/07.jpg" width="180px" height="180px" title="Kratos (3rd Mini Album)- VIXX">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Châu Á/Số 7.html"><b>Kratos</b></a></h3>
+					         			<a href="#">VIXX</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s27');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="s28" data-content="Love Like This (Single)" data-singer="Hyorin, Dok2" data-type="mp3">
+					         			<img src="Bài hát/Châu Á/08.jpg" width="180px" height="180px" title="Love Like This (Single) - Hyorin, Dok2">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Châu Á/Số 8.html"><b>Love Like Th...</b></a></h3>
+					         			<a href="#">Hyorin, Dok2</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('s28');">Thích</button>	
+					         	</div>
+					    	</div>
+
+					    </div>
+
+					    <!-- VIDEO -->
+					    <div class="content-3">
+
+							<!-- THE VIDEO OF VIET NAM  -->
+					    	<h2>VIỆT NAM</h2>
+
+					    	<!-- CHÈN HÌNH ẢNH, TÊN CA SĨ, TÊN VIDEO CHO MỤC VIDEO VN -->
+					    	<div class="video-vietnam">
+					    		<div class="first">
+					         		<div class="image" id="v04" data-content="Anh Đã Quen Với Cô Đơn" data-singer="Soobin Hoàng Sơn" data-type="mp4">
+					         			<img src="Video/Việt Nam/01.jpg" width="180px" height="180px" title="Anh Đã Quen Với Cô Đơn - Soobin Hoàng Sơn">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Video/Việt Nam/Số 1.html"><b>Anh Đã Que...</b></a></h3>
+					         			<a href="#">Soobin Hoàng Sơn</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v04');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v01" data-content="Tìm Một Nửa Cô Đơn" data-singer="Hòa Minzy" data-type="mp4">
+					         			<img src="Video/Việt Nam/02.jpg" width="180px" height="180px" title="Tìm Một Nửa Cô Đơn - Hòa Minzy">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Video/Việt Nam/Số 2.html"><b>Tìm Một Nửa...</b></a></h3>
+					         			<a href="#">Hòa Minzy</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v01');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v02" data-content="Ta Còn Thuộc Về Nhau" data-singer="Hương Tràm" data-type="mp4">
+					         			<img src="Video/Việt Nam/03.jpg" width="180px" height="180px" title="Ta Còn Thuộc Về Nhau - Hương Tràm">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Video/Việt Nam/Số 3.html"><b>Ta Còn Thuộ...</b></a></h3>
+					         			<a href="#">Hương Tràm</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v02');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v09" data-content="Từ Giây Phút Đầu" data-singer="Hari Won, Trấn Thành" data-type="mp4">
+					         			<img src="Video/Việt Nam/04.jpg" width="180px" height="180px" title="Từ Giây Phút Đầu - Hari Won, Trấn Thành">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Video/Việt Nam/Số 4.html"><b>Từ Giây Phú...</b></a></h3>
+					         			<a href="#">Hari Won, Trấn Thành</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v09');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v10" data-content="Nơi này có anh" data-singer="Sơn Tùng M-TP" data-type="mp4">
+					         			<img src="Video/Việt Nam/05.jpg" width="180px" height="180px">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Video/Việt Nam/Số 5.html"><b>Nơi này có anh</b></a></h3>
+					         			<a href="#">Sơn Tùng M-TP</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v10');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v11" data-content="Give It To Me" data-singer="Thiều Bảo Trang, Karik" data-type="mp4">
+					         			<img src="Video/Việt Nam/06.jpg" width="180px" height="180px" title="Give It To Me- Thiều Bảo Trang, Karik">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Video/Việt Nam/Số 6.html"><b>Give It To Me</b></a></h3>
+					         			<a href="#">Thiều Bảo Trang, Karik</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v11');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v12" data-content="Nếu Mai Này" data-singer="Dương Hoàng Yến" data-type="mp4">
+					         			<img src="Video/Việt Nam/07.jpg" width="180px" height="180px" title="Nếu Mai Này- Dương Hoàng Yến">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Video/Việt Nam/Số 7.html"><b>Nếu Mai Này</b></a></h3>
+					         			<a href="#">Dương Hoàng Yến</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v12');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v13" data-content="Câu Chuyện Làm Quen" data-singer="Quốc Thiên" data-type="mp4">
+					         			<img src="Video/Việt Nam/08.jpg" width="180px"  height="180px" title="Câu Chuyện Làm Quen - Quốc Thiên">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Video/Việt Nam/Số 8.html"><b>Câu Chuyện ...</b></a></h3>
+					         			<a href="#">Quốc Thiên</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v13');">Thích</button>
+					         	</div>
+					    	</div>
+
+					    	<!-- THE VIDEO OF USUK -->
+					    	<h2>ÂU MỸ</h2>
+
+					    	<!-- CHÈN HÌNH ẢNH, TÊN CA SĨ, TÊN VIDEO CHO MỤC VIDEO USUK -->
+					    	<div class="usuk">
+					    		<div class="first" >
+					         		<div class="image" id="v14" data-content="Rich Boy" data-singer="Galantis" data-type="mp4">
+					         			<img src="Video/Âu Mỹ/01.jpg" width="180px" height="180px" title="Rich Boy- Galantis">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Video/Âu Mỹ/Số 1.html"><b>Rich Boy</b></a></h3>
+					         			<a href="#">Galantis</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v14');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v15" data-content="So Good" data-singer="Zara Larsson" data-type="mp4">
+					         			<img src="Video/Âu Mỹ/02.jpg" width="180px" height="180px" title="So Good- Zara Larsson, Ty Dolla $ign">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Video/Âu Mỹ/Số 2.html"><b>So Good</b></a></h3>
+					         			<a href="#">Zara Larsson</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v15');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v08" data-content="Scared To Be Lonely" data-singer="Martin Garrix" data-type="mp4">
+					         			<img src="Video/Âu Mỹ/03.jpg" width="180px" height="180px" title="Scared To Be Lonely - Martin Garrix">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Video/Âu Mỹ/Số 3.html"><b>Scared To Be...</b></a></h3>
+					         			<a href="#">Martin Garrix</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v08');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v16" data-content="Alone" data-singer="Alan Walker" data-type="mp4">
+					         			<img src="Video/Âu Mỹ/04.jpg" width="180px" height="180px" title="Alone- Alan Walker">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Video/Âu Mỹ/Số 4.html"><b>Alone</b></a></h3>
+					         			<a href="#">Alan Walker</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v16');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v17" data-content="True Disaster" data-singer="Luis Fonsi, Daddy Yankee" data-type="mp4">
+					         			<img src="Video/Âu Mỹ/05.jpg" width="180px" height="180px" title=" True Disaster - Luis Fonsi, Daddy Yankee">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Video/Âu Mỹ/Số 5.html"><b>True Disaster</b></a></h3>
+					         			<a href="#">Luis Fonsi</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v17');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v18" data-content="Shape Of You" data-singer="Ed Sheeran" data-type="mp4">
+					         			<img src="Video/Âu Mỹ/06.jpg" width="180px" height="180px" title="Shape Of You- Ed Sheeran">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Video/Âu Mỹ/Số 6.html"><b>Shape Of You</b></a></h3>
+					         			<a href="#">Ed Sheeran</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v18');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v19" data-content="Despacito" data-singer="Luis Fonsi, Daddy Yankee" data-type="mp4">
+					         			<img src="Video/Âu Mỹ/07.jpg" width="180px" height="180px" title="Despacito- Luis Fonsi, Daddy Yankee">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Video/Âu Mỹ/Số 7.html"><b>Despacito</b></a></h3>
+					         			<a href="#">Luis Fonsi</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v19');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v20" data-content="One More Night" data-singer="New Kids On The Block" data-type="mp4">
+					         			<img src="Video/Âu Mỹ/08.jpg" width="180px" height="180px" title="One More Night - New Kids On The Block">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Video/Âu Mỹ/Số 8.html"><b>One More Ni...</b></a></h3>
+					         			<a href="#">New Kids On The Block</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v20');">Thích</button>
+					         	</div>
+					    	</div>
+
+					    	<!-- THE SONG OF ASIAN -->
+					    	<h2>CHÂU Á</h2>
+
+					    	<!-- CHÈN HÌNH ẢNH, TÊN CA SĨ, TÊN VIDEO CHO MỤC VIDEO CÁ -->
+					    	<div class="asian">
+					    		<div class="first" id="v20" data-content="DOWNPOUR" data-singer="I.O.I" data-type="mp4">
+					         		<div class="image">
+					         			<img src="Bài hát/Châu Á/01.jpg" width="180px" height="180px" title="DOWNPOUR- I.O.I ">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Châu Á/Số 1.html"><b>DOWNPOUR</b></a></h3>
+					         			<a href="#">I.O.I</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v20');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v21" data-content="Loser" data-singer="BIG BANG" data-type="mp4">
+					         			<img src="Bài hát/Châu Á/02.jpg" width="180px" height="180px" title="Loser- BIG BANG">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Châu Á/Số 2.html"><b>Loser</b></a></h3>
+					         			<a href="#">BIG BANG</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v21');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v22" data-content="Skydive" data-singer="B.A.P" data-type="mp4">
+					         			<img src="Bài hát/Châu Á/03.jpg" width="180px" height="180px" title="Skydive - B.A.P">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Châu Á/Số 3.html"><b>Skydive</b></a></h3>
+					         			<a href="#">B.A.P</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v22');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v23" data-content="New Men" data-singer="New Men" data-type="mp4">
+					         			<img src="Bài hát/Châu Á/04.jpg" width="180px" height="180px" title="New Men- BTOB">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Châu Á/Số 4.html"><b>New Men</b></a></h3>
+					         			<a href="#">New Men</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v23');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v24" data-content="HORIZON" data-singer="Hatsune Miku" data-type="mp4">
+					         			<img src="Bài hát/Châu Á/05.jpg" width="180px" height="180px"  title="HORIZON - Hatsune Miku">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Châu Á/Số 5.html"><b>HORIZON</b></a></h3>
+					         			<a href="#">Hatsune Miku</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v24');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v25" data-content="Hey Mama!" data-singer="EXO-CBX" data-type="mp4">
+					         			<img src="Bài hát/Châu Á/06.jpg" width="180px" height="180px" title="Hey Mama!- EXO-CBX">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Châu Á/Số 6.html"><b>Hey Mama!</b></a></h3>
+					         			<a href="#">EXO-CBX</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v25');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v26" data-content="The Closer" data-singer="VIXX" data-type="mp4">
+					         			<img src="Bài hát/Châu Á/07.jpg" width="180px" height="180px" title="The Closer (3rd Mini Album)- VIXX">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Châu Á/Số 7.html"><b>The Closer</b></a></h3>
+					         			<a href="#">VIXX</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v26');">Thích</button>
+					         	</div>
+					         	<div class="first">
+					         		<div class="image" id="v27" data-content="Love Like This (Single)" data-singer="Hyorin, Dok2" data-type="mp4">
+					         			<img src="Bài hát/Châu Á/08.jpg" width="180px" height="180px" title="Love Like This (Single) - Hyorin, Dok2">
+					         		</div>
+					         		<div class="sentences">
+					         			<h3><a href="Bài hát/Châu Á/Số 8.html"><b>Love Like Th...</b></a></h3>
+					         			<a href="#">Hyorin, Dok2</a>
+					         		</div>
+					         		<button onclick="AddToPlaylist('v27');">Thích</button>
+					         	</div>
+					    	</div>
+					    </div>
+
+					    <!-- CHARTS -->
+					    <div class="content-4">
+					    	
+					    	<!-- THIS IS THE SONG CHARTS -->
+					    	<div class="charts">
+					    		<h2>BXH BÀI HÁT</h2>
+
+					    		<!-- TẠO CÁC TAB CHO BXH BÀI HÁT -->
+								<section class="small-tabs">
+								    <input id="small-tab-1" type="radio" name="radio-set1" class="small-tab-selector-1" checked="checked" />
+								    <label for="small-tab-1" class="small-tab-label-1">VIỆT NAM</label>
+								      
+								    <input id="small-tab-2" type="radio" name="radio-set1" class="small-tab-selector-2" />
+								    <label for="small-tab-2" class="small-tab-label-2">ÂU MỸ</label>
+								      
+								    <input id="small-tab-3" type="radio" name="radio-set1" class="small-tab-selector-3" />
+								    <label for="small-tab-3" class="small-tab-label-3">HÀN QUỐC</label>
+					
+								    <div class="small-clear-shadow"></div>
+								                  
+								    <div class="small-content">
+
+								    	<!-- BXH VN -->
+								        <div class="small-content-1" id="id">
+								         	<ul>
+								         		<li>
+								         			<div>1</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Việt Nam\Số 1.html">Nơi này có anh</a></p>
+								         				<p><a href="#">Sơn Tùng MTP</a></p>
+								         			</div>
+								         		</li>
+								         		<li>
+								         			<div>2</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Việt Nam\Số 2.html">Yêu 5</a></p>
+								         				<p><a href="#">Rhymastic</a></p>
+								         			</div>
+								         		</li>
+								         		<li>
+								         			<div>3</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Việt Nam\Số 3.html">Có được không em</a></p>
+								         				<p><a href="#">Chi Dân</a></p>
+								         			</div>
+								         		</li>
+								         		<li>
+								         			<div>4</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Việt Nam\Số 4.html">Lạc trôi</a></p>
+								         				<p><a href="#">Sơn Tùng M-TP</a></p>
+								         			</div>
+								         		</li>
+								         		<li>
+								         			<div>5</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Việt Nam\Số 5.html">Em không là duy nhất</a></p>
+								         				<p><a href="#">Tóc Tiên</a></p>
+								         			</div>>
+								         		</li>
+								         		<li>
+								         			<div>6</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Việt Nam\Số 6.html">Phía sau một cô gái</a></p>
+								         				<p><a href="#">Soobin Hoàng Sơn</a></p>
+								         			</div>
+								         		</li>
+								         		<li>
+								         			<div>7</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Việt Nam\Số 7.html">Anh đã quen cô đơn</a></p>
+								         				<p><a href="#">Soobin Hoàng Sơn</a></p>
+								         			</div>
+								         		</li>
+								         		<li>
+								         			<div>8</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Việt Nam\Số 8.html">Não cá vàng</a></p>
+								         				<p><a href="#">Only C, Lou Hoàng</a></p>
+								         			</div>
+								         		</li>
+								         		<li>
+								         			<div>9</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Việt Nam\Số 9.html">Đi để trở về</a></p>
+								         				<p><a href="#">Soobin Hoàng Sơn</a></p>
+								         			</div>
+								         		</li>
+								         		<li>
+								         			<div>10</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Việt Nam\Số 10.html">Điều anh biết</a></p>
+								         				<p><a href="#">Chi Dân</a></p>
+								         			</div>
+								         		</li>
+								         	</ul>
+								        </div>
+
+								        <!-- BXH USUK  -->
+								        <div class="small-content-2" id="id">
+								        	<ul>
+								         		<li><a href="#">
+								         			<div>1</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Âu Mỹ\Số 1.html">Shape Of You</a></p>
+								         				<p><a href="#">Ed Sheeran</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>2</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Âu Mỹ\Số 2.html">That's What I Like</a></p>
+								         				<p><a href="#">Bruno Mars</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>3</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Âu Mỹ\Số 3.html">Bad And Boujee</a></p>
+								         				<p><a href="#">Migos, Lil Uzi Vert</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>4</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Âu Mỹ\Số 4.html">I Don't Live Forever</a></p>
+								         				<p><a href="#">ZAYN, Taylor Swift</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>5</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Âu Mỹ\Số 5.html">I Feel It Coming</a></p>
+								         				<p><a href="#">The Weeknd</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>6</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Âu Mỹ\Số 6.html">Tunnel Vision</a></p>
+								         				<p><a href="#">Kodak Black </a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>7</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Âu Mỹ\Số 7.html">Love On The Brain</a></p>
+								         				<p><a href="#">Rihanna</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>8</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Âu Mỹ\Số 8.html">Something Just Like This</a></p>
+								         				<p><a href="#">The Chainsmokers</a></p>
+								         			</div>>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>9</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Âu Mỹ\Số 9.html">Paris</a></p>
+								         				<p><a href="#">The Chainsmokers</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>10</div>
+								         			<div>
+								         				<p><a href="BXH\Bài hát\Âu Mỹ\Số 10.html">ISpy</a></p>
+								         				<p><a href="#">Kyle, Lil Yachty</a></p>
+								         			</div>
+								         		</a></li>
+								         	</ul>
+								        </div>
+
+								        <!-- BXH CÁ -->
+								         <div class="small-content-3" id="id">
+								        	<ul>
+								         		<li><a href="#">
+								         			<div>1</div>
+								         			<div>
+								         				<p><a href="#">Plz Don’t Be Sad</a></p>
+								         				<p><a href="#">Highlight</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>2</div>
+								         			<div>
+								         				<p><a href="#">Knock Knock</a></p>
+								         				<p><a href="#">TWICE</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>3</div>
+								         			<div>
+								         				<p><a href="#">I Will Go To You Like...</a></p>
+								         				<p><a href="#">Ailee</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>4</div>
+								         			<div>
+								         				<p><a href="#">Anymore</a></p>
+								         				<p><a href="#">Jung Key, WheeIn</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>5</div>
+								         			<div>
+								         				<p><a href="#">Fine</a></p>
+								         				<p><a href="#">TAEYEON</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>6</div>
+								         			<div>
+								         				<p><a href="#">Rookie</a></p>
+								         				<p><a href="#">Red Velvet</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>7</div>
+								         			<div>
+								         				<p><a href="#">Tell Me You Love Me</a></p>
+								         				<p><a href="#">Bolbbalgan4</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>8</div>
+								         			<div>
+								         				<p><a href="#">Last Goodbye</a></p>
+								         				<p><a href="#">Akdong Musician</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>9</div>
+								         			<div>
+								         				<p><a href="#">Spring Day</a></p>
+								         				<p><a href="#">BTS</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>10</div>
+								         			<div>
+								         				<p><a href="#">Yesterday</a></p>
+								         				<p><a href="#">Block B</a></p>
+								         			</div>
+								         		</a></li>
+								         	</ul>
+								        </div>
+
+								    </div>
+								</section>
+							</div>
+
+							 <!-- THIS IS THE VIDEO CHARTS -->
+					    	<div class="video">
+					    		<h2>BXH VIDEO</h2>
+
+					    		<!-- TẠO CÁC TAB CHO BXH VIDEO -->
+								<section class="small-tabs">
+								    <input id="small-tab-11" type="radio" name="radio-set21" class="small-tab-selector-1" />
+								    <label for="small-tab-11" class="small-tab-label-1">VIỆT NAM</label>
+								      
+								    <input id="small-tab-21" type="radio" name="radio-set21" class="small-tab-selector-2" />
+								    <label for="small-tab-21" class="small-tab-label-2">ÂU MỸ</label>
+								      
+								    <input id="small-tab-31" type="radio" name="radio-set21" class="small-tab-selector-3" checked="checked"  />
+								    <label for="small-tab-31" class="small-tab-label-3">HÀN QUỐC</label>
+					
+								    <div class="small-clear-shadow"></div>
+								                  
+								    <div class="small-content">
+								    	<!-- BXH VN -->
+								        <div class="small-content-1" id="id">
+								         	<ul>
+								         		<li>
+								         			<div>1</div>
+								         			<div>
+								         				<p><a href="#">Nơi này có anh</a></p>
+								         				<p><a href="#">Sơn Tùng MTP</a></p>
+								         			</div>
+								         		</li>
+								         		<li>
+								         			<div>2</div>
+								         			<div>
+								         				<p><a href="#">Một Nửa Của Đời Mình</a></p>
+								         				<p><a href="#">Cao Thái Sơn</a></p>
+								         			</div>
+								         		</li>
+								         		<li>
+								         			<div>3</div>
+								         			<div>
+								         				<p><a href="#">Bao Giờ Lấy Chồng?</a></p>
+								         				<p><a href="#">Bích Phương</a></p>
+								         			</div>
+								         		</li>
+								         		<li>
+								         			<div>4</div>
+								         			<div>
+								         				<p><a href="#">Anh Đã Quen Cô Đơn</a></p>
+								         				<p><a href="#">Soobin Hoàng Sơn</a></p>
+								         			</div>
+								         		</li>
+								         		<li>
+								         			<div>5</div>
+								         			<div>
+								         				<p><a href="#">Bố Vợ (Phim Ngắn)</a></p>
+								         				<p><a href="#">Yanbi, Bueno, T-Akayz</a></p>
+								         			</div>
+								         		</li>
+								         		<li>
+								         			<div>6</div>
+								         			<div>
+								         				<p><a href="#">Thiên Tử</a></p>
+								         				<p><a href="#">Đan Trường</a></p>
+								         			</div>
+								         		</li>
+								         		<li>
+								         			<div>7</div>
+								         			<div>
+								         				<p><a href="#">Ta Còn Thuộc Về Nhau</a></p>
+								         				<p><a href="#">Hương Tràm</a></p>
+								         			</div>
+								         		</li>
+								         		<li>
+								         			<div>8</div>
+								         			<div>
+								         				<p><a href="#">Từ Giây Phút Đầu</a></p>
+								         				<p><a href="#">Hari Won, Trấn Thành</a></p>
+								         			</div>
+								         		</li>
+								         		<li>
+								         			<div>9</div>
+								         			<div>
+								         				<p><a href="#">Từ Bỏ... Anh Yêu Em</a></p>
+								         				<p><a href="#">Khắc Việt</a></p>
+								         			</div>
+								         		</li>
+								         		<li>
+								         			<div>10</div>
+								         			<div>
+								         				<p><a href="#">Tìm Một Nửa Cô Đơn</a></p>
+								         				<p><a href="#">Hòa Minzy</a></p>
+								         			</div>
+								         		</li>
+								         	</ul>
+								        </div>
+
+								        <!-- BXH USUK -->
+								        <div class="small-content-2" id="id">
+								        	<ul>
+								         		<li><a href="#">
+								         			<div>1</div>
+								         			<div>
+								         				<p><a href="#">Despacito</a></p>
+								         				<p><a href="#">Luis Fonsi, Daddy Yankee</a></p>
+								         			</div
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>2</div>
+								         			<div>
+								         				<p><a href="#">Shape Of You</a></p>
+								         				<p><a href="#">Ed Sheeran</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>3</div>
+								         			<div>
+								         				<p><a href="#">Chantaje</a></p>
+								         				<p><a href="#">Shakira, Maluma</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>4</div>
+								         			<div>
+								         				<p><a href="#">Rockabye</a></p>
+								         				<p><a href="#">Clean Bandit, Sean Paul</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>5</div>
+								         			<div>
+								         				<p><a href="#">Reggaetón Lento (Bailemos)</a></p>
+								         				<p><a href="#">CNCO</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>6</div>
+								         			<div>
+								         				<p><a href="#">That's What I Like</a></p>
+								         				<p><a href="#">Bruno Mars</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>7</div>
+								         			<div>
+								         				<p><a href="#">Starboy</a></p>
+								         				<p><a href="#">The Weeknd, Daft Punk</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>8</div>
+								         			<div>
+								         				<p><a href="#">El Amante</a></p>
+								         				<p><a href="#">Nicky Jam</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>9</div>
+								         			<div>
+								         				<p><a href="#">Vente Pa’ Ca</a></p>
+								         				<p><a href="#">Ricky Martin, Maluma</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>10</div>
+								         			<div>
+								         				<p><a href="#">Closer</a></p>
+								         				<p><a href="#">The Chainsmokers, Halsey</a></p>
+								         			</div>
+								         		</a></li>
+								         	</ul>
+								        </div>
+
+								        <!-- BXH CÁ -->
+								         <div class="small-content-3" id="id">
+								        	<ul>
+								         		<li><a href="#">
+								         			<div>1</div>
+								         			<div>
+								         				<p><a href="#">Knock Knock</a></p>
+								         				<p><a href="#">TWICE</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>2</div>
+								         			<div>
+								         				<p><a href="#">It‘s Still Beautiful</a></p>
+								         				<p><a href="#">Highlight</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>3</div>
+								         			<div>
+								         				<p><a href="#">Fingertip</a></p>
+								         				<p><a href="#">GFRIEND</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>4</div>
+								         			<div>
+								         				<p><a href="#">Spring Again</a></p>
+								         				<p><a href="#">Cao Lu, Kisum, Yerin</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>5</div>
+								         			<div>
+								         				<p><a href="#">Rookie</a></p>
+								         				<p><a href="#">Red Velvet</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>6</div>
+								         			<div>
+								         				<p><a href="#">Never Ever</a></p>
+								         				<p><a href="#">GOT7</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>7</div>
+								         			<div>
+								         				<p><a href="#">Plz Don’t Be Sad</a></p>
+								         				<p><a href="#">Highlight</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>8</div>
+								         			<div>
+								         				<p><a href="#">Movie</a></p>
+								         				<p><a href="#">BTOB</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>9</div>
+								         			<div>
+								         				<p><a href="#">Wish</a></p>
+								         				<p><a href="#">Jung Joon Il (Mate)</a></p>
+								         			</div>
+								         		</a></li>
+								         		<li><a href="#">
+								         			<div>10</div>
+								         			<div>
+								         				<p><a href="#">I Don't Want</a></p>
+								         				<p><a href="#">Jungkey</a></p>
+								         			</div>	
+								         		</a></li>
+								         	</ul>
+								        </div>
+
+								    </div>
+								</section>
+							</div>
+
+							</div>
+					    </div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- THE FOOTER  -->
+			<div class="footer">
+				<!-- TẠO NỘI DUNG CHO FOOTER -->
+				<div class="letter">
+					<ul>
+						<li><a href="#">Giới thiệu</a></li>
+						<li><a href="#">Copyright</a></li>
+						<li><a href="#">APIs</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Điều khoản</a></li>
+						<li><a href="#">Khuong MP3 VIP</a></li>
+						<li><a href="#">Liên hệ</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Quảng cáo</a></li>
+						<li><a href="#">Ứng dụng</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">FAQs</a></li>
+						<li><a href="#">Góp ý</a></li>
+					</ul>
+				</div>
+
+				<!-- CHÈN ICON -->
+				<div class="icon">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-google-plus"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+				</div>
+
+			</div>
+
+		</div>
+	</body>
+</html>
